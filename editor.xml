@@ -1,0 +1,11 @@
+<application>
+  <component name="CodeInsightSettings">
+    <EXCLUDED_PACKAGE NAME="java.util.Date" />
+    <EXCLUDED_PACKAGE NAME="org.slf4j.Logger" />
+  </component>
+  <component name="DefaultFont">
+    <option name="FONT_SIZE" value="15" />
+    <option name="FONT_FAMILY" value="DejaVu Sans Mono" />
+    <option name="SECONDARY_FONT_FAMILY" value="YaHei Consolas Hybrid" />
+  </component>
+</application>
