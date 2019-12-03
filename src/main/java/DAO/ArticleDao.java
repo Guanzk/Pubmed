@@ -40,27 +40,21 @@ public class ArticleDao {
     }
 
     public static HashMap<String, List<String>> getPmidByAid(List<AuthorInformation> relatedAuthors) {
-        HashMap<String, List<String>> res=new HashMap<>();
+
         long start=System.currentTimeMillis();
-        for(AuthorInformation a:relatedAuthors){
-            if(a.getAid().equals("0"))continue;//TODO 数据待优化，不然卡很久
-            res.put(a.getAid(),new LinkedList<String>(){{
-                addAll(ReadDataFromRedis.getPMIDfromaid(redis,a.getAid()));
-            }});
-        }
+        HashMap<String, List<String>> res=ReadDataFromRedis.getPMIDfromaids(redis,relatedAuthors);
+
         long end=System.currentTimeMillis();
         log.debug("获取文章aid用时:"+(end-start));
         return res;
     }
 
     public static HashMap<String, Integer> getPmidCitation(List<String> pmids) {
-        HashMap<String, Integer> res=new HashMap<>();
+
         long start=System.currentTimeMillis();
-        for(String pmid:pmids){
-            String ref=ReadDataFromRedis.getReferencefromPMID(redis,pmid);
-            res.put(pmid,ref==null?0:Integer.parseInt(ref));
-        }
+        HashMap<String, Integer> res=ReadDataFromRedis.getReferencefromPMIDs(redis,pmids);
         long end=System.currentTimeMillis();
+
         log.debug("获取文章引用用时:"+(end-start));
         return res;
     }

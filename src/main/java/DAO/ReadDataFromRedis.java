@@ -1,10 +1,10 @@
 package DAO;
-import	java.util.HashSet;
+import java.util.*;
 
+import Bean.AuthorInformation;
 import redis.clients.jedis.*;
 
 import java.io.Reader;
-import java.util.Set;
 
 public class ReadDataFromRedis {
 
@@ -17,6 +17,51 @@ public class ReadDataFromRedis {
 
     public ReadDataFromRedis(){
         initialPool();
+    }
+
+    public static List<AuthorInformation> getKeywordsFromAids(ReadDataFromRedis redis, List<AuthorInformation> res) {
+        Jedis jedis =redis.getResource();
+        jedis.select(35);
+        for(AuthorInformation a:res){
+            if(a.getAid().equals("0")){
+                continue;//Todo 优化数据，数据问题
+            }
+            Set<Tuple>s=jedis.zrevrangeWithScores(a.getAid(),0,-1);
+            List<String>keywords=new LinkedList<>();
+            for(Tuple t:s){
+                keywords.add(t.getElement());
+            }
+//            log.debug(a.getAid());
+            a.setKeywords(keywords);
+        }
+        jedis.close();
+        return res;
+    }
+
+    public static HashMap<String, List<String>> getPMIDfromaids(ReadDataFromRedis redis, List<AuthorInformation> relatedAuthors) {
+        HashMap<String, List<String>>res=new HashMap<>();
+        Jedis jedis =redis.getResource();
+
+        for(AuthorInformation a:relatedAuthors){
+            if(a.getAid().equals("0"))continue;//TODO 数据待优化，不然卡很久
+            res.put(a.getAid(),new LinkedList<String>(){{
+                addAll(jedis.smembers(a.getAid()));
+            }});
+        }
+        jedis.close();
+        return res;
+    }
+
+    public static HashMap<String, Integer> getReferencefromPMIDs(ReadDataFromRedis redis, List<String> pmids) {
+        Jedis jedis = redis.getResource();
+        jedis.select(13);
+        HashMap<String, Integer>res=new HashMap<>();
+        for(String pmid:pmids){
+            String ref=jedis.get(pmid);
+            res.put(pmid,ref==null?0:Integer.parseInt(ref));
+        }
+        jedis.close();
+    return res;
     }
 
     private void initialPool(){

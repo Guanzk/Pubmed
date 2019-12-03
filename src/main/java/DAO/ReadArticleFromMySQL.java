@@ -35,6 +35,7 @@ public class ReadArticleFromMySQL extends ReadDataFromMySQL {
                 //通过PMID列表来逐个搜索PMID所对应的文章标题、出版年份及参与作者数量
                 String selectarticles = "select * from "+MySQLConfig.get("ARTICLES_TABLE_NAME")+" where "+MySQLConfig.get("article_PMID")+"="+Integer.parseInt(str);
                 rs = stmt.executeQuery(selectarticles);
+
                 while (rs.next()) {
                     articlesSimples.add(getArticlesSimpleFromMySQL(rs));
 
