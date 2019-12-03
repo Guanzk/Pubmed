@@ -146,11 +146,11 @@ public class MedEntity {
         return keywordsCount;
     }
 
-    public HashMap<String, Integer> getAffiliationIndex() {
-        HashMap<String,Integer>res=new HashMap<>();
+    public HashMap<String, Double> getAffiliationIndex() {
+        HashMap<String,Double>res=new HashMap<>();
         for(String org:affiliationTotalPapers.keySet()){
             if(!pmidByAffiliation.containsKey(org)||!affiliationTotalPapers.containsKey(org))continue;
-            res.put(org,pmidByAffiliation.get(org).size()/affiliationTotalPapers.get(org));
+            res.put(org,(double)pmidByAffiliation.get(org).size()/affiliationTotalPapers.get(org));
         }
         return res;
     }

@@ -8,9 +8,11 @@ import Bean.MedEntity;
 import DAO.AuthorUtil;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 
+@Slf4j
 public class MakeJson {
     public static String makeAuthorJson(Author author){
 
@@ -240,6 +242,7 @@ public class MakeJson {
         JsonArray relatedOrganizationData=new JsonArray();
         List<String>affiliations=new LinkedList<>(entity.getPmidByAffiliation().keySet());
         for(int i=0;i<affiliations.size()&&i<5;i++){
+
             relatedOrganizationData.add(affiliations.get(i));
         }
         relatedOrganizations.addProperty("dimension","related organizations");
@@ -252,7 +255,8 @@ public class MakeJson {
         JsonArray expertAtlasData=new JsonArray();
         List<String>expertNames=entity.getRelatedExpert();
         for(int i=0;i<expertNames.size();i++){
-            relatedOrganizationData.add(expertNames.get(i));
+
+            expertAtlasData.add(expertNames.get(i));
         }
         expertAtlas.addProperty("graphName","expert_atlas_relation");
         expertAtlas.add("data",expertAtlasData);
@@ -313,7 +317,7 @@ public class MakeJson {
         JsonObject organization=new JsonObject();
         organization.addProperty("title","Articles related / total articles");
         JsonObject organizationData=new JsonObject();
-        HashMap<String,Integer>affiliationIndex=entity.getAffiliationIndex();
+        HashMap<String,Double>affiliationIndex=entity.getAffiliationIndex();
         for(String affiliation:affiliationIndex.keySet()){
             organizationData.addProperty(affiliation,affiliationIndex.get(affiliation));
         }

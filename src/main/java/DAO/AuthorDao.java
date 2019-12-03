@@ -13,18 +13,8 @@ public class AuthorDao {
     public static List<AuthorInformation> getEntityRelatedAuthors(List<String> pmids) {
         List<AuthorInformation>res=ReadAuthorFromMySQL.getAuthorsFromPmids(pmids);
         long start=System.currentTimeMillis();
-        for(AuthorInformation a:res){
-            if(a.getAid().equals("0")){
-                continue;//Todo 优化数据，数据问题
-            }
-            Set<Tuple>s=ReadDataFromRedis.getKeywordsFromAid(redis,a.getAid());
-            List<String>keywords=new LinkedList<>();
-            for(Tuple t:s){
-                keywords.add(t.getElement());
-            }
-//            log.debug(a.getAid());
-            a.setKeywords(keywords);
-        }
+        res=ReadDataFromRedis.getKeywordsFromAids(redis,res);
+
         long end=System.currentTimeMillis();
         log.debug("获取医药实体相关作者用时："+(end-start));
         return res;
