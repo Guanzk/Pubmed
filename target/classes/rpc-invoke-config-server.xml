@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:nettyrpc="http://www.newlandframework.com/nettyrpc" xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.newlandframework.com/nettyrpc http://www.newlandframework.com/nettyrpc/nettyrpc.xsd">
+    <context:property-placeholder location="classpath:rpc-server.properties"/>
+    <bean id="beanFactory" class="com.newlandframework.rpc.spring.BeanFactoryUtils"/>
+
+    <nettyrpc:service id="searchPubmed" interfaceName="Services.PubmedSearch"
+
+                      ref="PubmedSearchImpl"></nettyrpc:service>
+
+
+    <nettyrpc:registry id="rpcRegistry" ipAddr="${rpc.server.addr}" echoApiPort="${rpc.server.echo.api.port}"
+                       protocol="PROTOSTUFFSERIALIZE"></nettyrpc:registry>
+
+
+
+    <bean id="PubmedSearchImpl" class="Server.PubmedSearchImpl"></bean>
+
+    <!--NettyRPC Listeners And FilterChain Config by tangjie-->
+    <bean id="listeners" class="com.newlandframework.rpc.listener.ModuleListenerChainWrapper">
+        <constructor-arg name="modular">
+            <bean class="com.newlandframework.rpc.core.DefaultModular"></bean>
+        </constructor-arg>
+        <property name="listeners">
+            <list>
+                <ref bean="listenerAdapter"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="modular" class="com.newlandframework.rpc.filter.ModuleFilterChainWrapper">
+        <constructor-arg name="modular" ref="listeners"/>
+        <property name="filters">
+            <list>
+                <ref bean="classLoaderChainFilter"/>
+                <ref bean="echoChainFilter"/>
+            </list>
+        </property>
+    </bean>
+    <!--Listeners-->
+    <bean id="listenerAdapter" class="com.newlandframework.rpc.listener.support.ModuleListenerAdapter"/>
+    <!--FilterChain-->
+    <bean id="classLoaderChainFilter" class="com.newlandframework.rpc.filter.support.ClassLoaderChainFilter"/>
+    <bean id="echoChainFilter" class="com.newlandframework.rpc.filter.support.EchoChainFilter"/>
+</beans>
