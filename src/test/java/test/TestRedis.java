@@ -19,6 +19,7 @@ public class TestRedis {
         List<String> pmids=AuthorUtil.getPmids(aid);
         log.info(aids.toArray().toString());
         log.info(pmids.toArray().toString());
+        System.out.println("aids:"+aids);
 
     }
 }

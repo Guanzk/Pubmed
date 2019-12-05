@@ -2,178 +2,174 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2e542b8-26b7-4330-96f1-20b57fae4149" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/Bean/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bean/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bean/AuthorInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bean/QueryRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bean/QueryResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client/ClientStarter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/TestDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/nettyrpc.xsd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.handlers" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.schemas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NettyRPC-logo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/PubmedSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/ByteBufToBytes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/EntityMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/QueryClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/c3p0-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallResultInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncFuture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncInvoker$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncInvoker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/CallStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/boot/RpcServerStarter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/AccessAdaptive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/ClassProxy$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/Compiler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/StringJavaFileObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/intercept/Interceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/intercept/Invocation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/intercept/SimpleMethodInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/invoke/AbstractInvoker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/invoke/InterceptorInvoker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/invoke/ObjectInvoker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/AbstractProxyProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ClassProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/Transformer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/AbilityDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/DefaultModular$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/DefaultModular.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/Modular.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/ModuleInvoker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/ModuleProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/RpcSystemConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/AbstractInvokeEventBus$ModuleEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/AbstractInvokeEventBus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/AbstractInvokeObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/ClientStopEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/ClientStopEventListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeEventBusAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeEventWatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeFailEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeFailObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeFailStackTraceEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeFilterEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeFilterObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeMaxTimeSpanEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeMinTimeSpanEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeSuccEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeSuccObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeTimeSpanEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/ServerStartEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/exception/AsyncCallException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/exception/CreateProxyException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/exception/InvokeModuleException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/exception/InvokeTimeoutException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/exception/RejectResponeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/ChainFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/Filter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/ServiceFilterBinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/support/SimpleFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/MetricsTask$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/MetricsTask$ModuleMetrics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsVisitorMXBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ThreadPoolStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/listener/ModuleListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/listener/support/ModuleListenerAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/model/MessageKeyVal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/model/MessageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/model/MessageResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/AbstractMessageRecvInitializeTask$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvChannelInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvInitializeTaskAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendChannelInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendExecutor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendExecutor$MessageSendExecutorHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendExecutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendInitializeTask$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendInitializeTask$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendInitializeTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MethodInvoker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RecvInitializeTaskFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcRecvSerializeFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcSendSerializeFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/HessianRecvHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/HessianSendHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/JdkNativeRecvHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/JdkNativeSendHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/KryoRecvHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/KryoSendHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/NettyRpcRecvHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/NettyRpcSendHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/ProtostuffRecvHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/handler/ProtostuffSendHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/BlockingQueueType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/AbortPolicy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/CallerRunsPolicy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/RejectedPolicyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/RejectedRunnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/MessageCodecUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/MessageEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/RpcSerialize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/RpcSerializeFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/RpcSerializeProtocol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianCodecUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianSerializeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoCodecUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoPoolFactory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoSerialize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffCodecUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffSerializeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/SchemaCache$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/SchemaCache$SchemaCacheHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/AddCalculate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/Cache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/CostTimeCalculate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/JdbcPersonManage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/MultiCalculate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/PersonManage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/Store.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/AddCalculateImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/CacheImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/CacheImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/MultiCalculateImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/StoreImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/pojo/CostTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcReferenceParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcRegisteryParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcServiceParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/AuthorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysql.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rpc-invoke-config-client.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rpc-invoke-config-server.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rpc-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AccessProvider.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/PojoCallTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcAbilityDetailProviderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/jdbc/NettyRpcJdbcServerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rpc-invoke-config-client.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rpc-invoke-config-jdbc-client.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rpc-invoke-config-jdbc-server.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rpc-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/TestEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/TestRedis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/TestSpeed.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/common.2019-12-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/common.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/db.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/RedisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Redisapp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/rt/RedisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/rt/SbRedisApplicationtest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NettyRPC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NettyRPC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis(3).conf" beforeDir="false" afterPath="$PROJECT_DIR$/redis(3).conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/PubmedSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/PubmedSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/TestEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/TestEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/TestRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/TestRedis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bean/MedEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bean/MedEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/BsConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/BsConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/BsConfig$ReloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/BsConfig$ReloadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/BsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/BsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/FileHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/FileHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/MySQLConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/MySQLConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/MySQLConfig$ReloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/MySQLConfig$ReloadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/MySQLConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/MySQLConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/RedisConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/RedisConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/RedisConfig$ReloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/RedisConfig$ReloadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/ResultConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/ResultConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/ResultConfig$ReloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/ResultConfig$ReloadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config/ResultConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/ResultConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ArticleDao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ArticleDao$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ArticleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/AuthorUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/AuthorUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/AuthorUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/AuthorUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/MedEntityDao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/MedEntityDao$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/MedEntityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/MedEntityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ReadArticleFromMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ReadArticleFromMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ReadAuthorFromMySQL$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ReadAuthorFromMySQL$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ReadAuthorFromMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ReadAuthorFromMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ReadDataFromMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ReadDataFromMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ReadDataFromRedis$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ReadDataFromRedis$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ReadDataFromRedis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ReadDataFromRedis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/SQLPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/SQLPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/WriteDataIntoRedis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/WriteDataIntoRedis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/PubmedSearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/PubmedSearchImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/QueryResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/QueryResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/QueryResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/QueryResult$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/QueryResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/QueryResult$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/QueryResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/QueryResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/ServerStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/ServerStarter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/ArticleUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/ArticleUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/ArticleUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/ArticleUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/MakeJson$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/MakeJson$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/MakeJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/MakeJson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/MatchQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/MatchQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallObjectInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallObjectInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncCallResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncProxyCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/async/AsyncProxyCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/AbstractAccessAdaptive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/AbstractAccessAdaptive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/AccessAdaptiveProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/AccessAdaptiveProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/ClassProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/ClassProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/NativeCompiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/NativeCompiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/intercept/InvocationProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/intercept/InvocationProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/AbstractClassTransformer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/AbstractClassTransformer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ByteCodeClassTransformer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ByteCodeClassTransformer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ClassCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ClassCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/MethodDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/MethodDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ProxyProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/compiler/weaver/ProxyProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/AbilityDetailProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/AbilityDetailProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/MessageCallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/MessageCallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/ReflectionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/core/ReflectionUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeEventBusFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/event/InvokeEventBusFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/ModuleFilterChainWrapper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/ModuleFilterChainWrapper$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/ModuleFilterChainWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/ModuleFilterChainWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/support/ClassLoaderChainFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/support/ClassLoaderChainFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/support/EchoChainFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/filter/support/EchoChainFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/AbstractModuleMetricsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/AbstractModuleMetricsHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/HashModuleMetricsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/HashModuleMetricsVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/MetricsAggregationTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/MetricsAggregationTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/MetricsTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/MetricsTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsHandler$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsHandler$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ModuleMetricsVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ThreadPoolMonitorProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/jmx/ThreadPoolMonitorProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/listener/ModuleListenerChainWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/listener/ModuleListenerChainWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/listener/ModuleProviderWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/listener/ModuleProviderWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/AbstractMessageRecvInitializeTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/AbstractMessageRecvInitializeTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/HashMessageRecvInitializeTask$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/HashMessageRecvInitializeTask$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/HashMessageRecvInitializeTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/HashMessageRecvInitializeTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$MessageRecvExecutorHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor$MessageRecvExecutorHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvExecutor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvInitializeTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageRecvInitializeTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MessageSendHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MethodProxyAdvisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/MethodProxyAdvisor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcRecvSerializeFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcRecvSerializeFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcSendSerializeFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcSendSerializeFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcServerLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcServerLoader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcServerLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/RpcServerLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/resolver/ApiEchoHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/resolver/ApiEchoHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/resolver/ApiEchoInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/resolver/ApiEchoInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/resolver/ApiEchoResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/netty/resolver/ApiEchoResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/AbstractDaemonThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/AbstractDaemonThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/HashCriticalSection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/HashCriticalSection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/NamedThreadFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/NamedThreadFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/RpcThreadPool$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/RpcThreadPool$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/RpcThreadPool$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/RpcThreadPool$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/RpcThreadPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/RpcThreadPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/SemaphoreWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/SemaphoreWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/SemaphoreWrapperFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/SemaphoreWrapperFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/BlockingPolicy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/BlockingPolicy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/DiscardedPolicy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/DiscardedPolicy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/RejectedPolicy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/parallel/policy/RejectedPolicy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/MessageDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/MessageDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianSerialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianSerialize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianSerializePool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/hessian/HessianSerializePool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoPoolFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/kryo/KryoPoolFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffSerialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffSerialize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffSerializePool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/ProtostuffSerializePool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/SchemaCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/serialize/protostuff/SchemaCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/CostTimeCalculateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/CostTimeCalculateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/JdbcPersonManageImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/JdbcPersonManageImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/PersonManageImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/impl/PersonManageImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/pojo/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/services/pojo/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/BeanFactoryUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/BeanFactoryUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcNamespaceHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcNamespaceHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcReference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcReference.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcRegistery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcRegistery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/newlandframework/rpc/spring/NettyRpcService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AddCalcParallelRequestThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AddCalcParallelRequestThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallErrorTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallErrorTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallErrorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallErrorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcCallTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcTimeoutCallTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcTimeoutCallTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcTimeoutCallTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/AsyncRpcTimeoutCallTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/MultiCalcParallelRequestThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/MultiCalcParallelRequestThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/PojoCallErrorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/PojoCallErrorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/PojoTimeoutCallTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/PojoTimeoutCallTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcFilterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcFilterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcParallelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcParallelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcServerAccessTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/RpcServerAccessTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/jdbc/NettyRpcJdbcClientErrorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/jdbc/NettyRpcJdbcClientErrorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/jdbc/NettyRpcJdbcClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/newlandframework/test/jdbc/NettyRpcJdbcClientTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,10 +177,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="ComposerSettings">
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -205,15 +214,25 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1UOO6ZG88nwmQazSxCpGazuJ5ox" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -221,7 +240,16 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
+      <recent name="rt" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -235,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SbRedisApplicationtest.testString">
     <configuration name="TestEntity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.TestEntity" />
       <module name="NettyRPC" />
@@ -249,9 +277,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRedis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TestRedis" />
+      <module name="NettyRPC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SbRedisApplicationtest.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NettyRPC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rt" />
+      <option name="MAIN_CLASS_NAME" value="rt.SbRedisApplicationtest" />
+      <option name="METHOD_NAME" value="testString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="NettyRPC" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Client.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="NettyRPC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="rt.RedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="NettyRPC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="controller.RedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SbRedisApplicationtest.testString" />
+        <item itemvalue="Application.TestRedis" />
         <item itemvalue="Application.TestEntity" />
+        <item itemvalue="Spring Boot.RedisApplication (2)" />
+        <item itemvalue="Spring Boot.RedisApplication (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -269,6 +363,7 @@
       <workItem from="1575243462681" duration="506000" />
       <workItem from="1575244075913" duration="1127000" />
       <workItem from="1575245275587" duration="6819000" />
+      <workItem from="1575446180242" duration="11105000" />
     </task>
     <task id="LOCAL-00001" summary="修改 med entity bug">
       <created>1575255175259</created>
@@ -291,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575257341984</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pull一下">
+      <created>1575442946134</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575442946134</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,8 +445,10 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="修改 med entity bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改 med entity bug" />
+    <MESSAGE value="pull一下" />
+    <option name="LAST_COMMIT_MESSAGE" value="pull一下" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Project_Structure" />
@@ -383,5 +487,19 @@
     <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" />
     <state x="560" y="214" key="git4idea.merge.GitMergeDialog" />
     <state x="560" y="214" key="git4idea.merge.GitMergeDialog/0.0.1536.824@0.0.1536.824" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/test/TestRedis.java</url>
+          <line>11</line>
+          <properties class="test.TestRedis" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
