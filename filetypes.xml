@@ -10,7 +10,6 @@
       <mapping pattern="SearchService.proto" type="PLAIN_TEXT" />
       <mapping pattern="思路" type="PLAIN_TEXT" />
       <mapping ext="conf" type="PLAIN_TEXT" />
-      <mapping ext="proto" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
