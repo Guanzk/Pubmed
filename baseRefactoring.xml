@@ -2,7 +2,4 @@
   <component name="BaseRefactoringSettings">
     <option name="SAFE_DELETE_WHEN_DELETE" value="false" />
   </component>
-  <component name="RefactoringSettings">
-    <option name="MOVE_SEARCH_FOR_TEXT" value="false" />
-  </component>
 </application>
