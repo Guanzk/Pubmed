@@ -133,7 +133,7 @@ public class ReadDataFromRedis {
         String scanRet = "0";
         do {
             ScanResult<String> ret = jedis.scan(scanRet, scanParams);
-            scanRet = ret.getCursor();// 返回用于下次遍历的游标
+            scanRet = String.valueOf(ret.getCursor());// 返回用于下次遍历的游标
             reset.addAll(ret.getResult());// 返回结果
         } while (!scanRet.equals("0"));
         System.out.println("retList size:" + reset.size());
