@@ -6,13 +6,23 @@ package com.searchproject.pubmed.Bean;
  * 作者著作PMID ； 文章出版年份Pubyear ； 文章标题ArticleTitle； 文章参与作者数量AuthorNum;
  */
 
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * author: @DrRic
  */
 
+@Data
+@Entity
+@Table(name="article_simple")
 public class Article {
 
     //根据aid所检索获得的PMID进行文章相关信息的检索
+    @Id
     private int PMID;
 
     //查询文章出版年份、标题及参与撰写的作者数量
