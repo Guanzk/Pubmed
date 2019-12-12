@@ -12,18 +12,18 @@ import java.io.FileNotFoundException;
 public class PubmedApplication {
 
     public static void main(String[] args) {
-        File file = null;
-        try {
-            file = ResourceUtils.getFile("classpath:mysql.conf");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        System.out.println(file.exists());
-        try {
-            MySQLConfig.load(MySQLConfig.class.getClassLoader().getResource("mysql.conf").getFile());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        File file = null;
+//        try {
+//            file = ResourceUtils.getFile("classpath:mysql.conf");
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println(file.exists());
+//        try {
+//            MySQLConfig.load(MySQLConfig.class.getClassLoader().getResource("mysql.conf").getFile());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         SpringApplication.run(PubmedApplication.class, args);
     }
 

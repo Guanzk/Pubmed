@@ -1,9 +1,6 @@
 package com.searchproject.pubmed.test;
 
-import com.searchproject.pubmed.Bean.AffiliationCount;
-import com.searchproject.pubmed.Bean.Article;
-import com.searchproject.pubmed.Bean.AuthorSimple;
-import com.searchproject.pubmed.Bean.Paper;
+import com.searchproject.pubmed.Bean.*;
 import com.searchproject.pubmed.dao.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -48,7 +45,8 @@ public class TestDao {
 //        log.info("affiliation count:"+year);
         List<AuthorSimple>as=authorSimpleDao.findAllByPmidIn(pmids);
         log.info("authors:"+as);
-
+        AuthorUtil au=new AuthorUtil();
+        log.info("AuthorInformation:"+au.getAuthorInformation(aid.get(0)));
 //        List<Paper> ps=paperDao.findAll(ex);
 //        System.out.println(ps);
     }

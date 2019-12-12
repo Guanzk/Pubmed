@@ -18,7 +18,7 @@ public class AuthorInformation {
     private String aid = "";
 
     //根据aid获得对应的PMID用以查询后续的相关操作
-    private int PMID;
+    private String PMID;
     private String Affiliation = "";
     private String Email = "";
     private String Zipcode = "";
@@ -30,7 +30,7 @@ public class AuthorInformation {
     public AuthorInformation() {
     }
 
-    public AuthorInformation(String aid, int pmid, String affiliation, String email, String zipcode) {
+    public AuthorInformation(String aid, String pmid, String affiliation, String email, String zipcode) {
         this.aid = aid;
         PMID = pmid;
         Affiliation = affiliation;
@@ -54,11 +54,11 @@ public class AuthorInformation {
         return this.aid;
     }
 
-    public void setPMID(int PMID) {
+    public void setPMID(String PMID) {
         this.PMID = PMID;
     }
 
-    public int getPMID() {
+    public String getPMID() {
         return this.PMID;
     }
 

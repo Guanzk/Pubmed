@@ -28,7 +28,7 @@ public class Article {
     //查询文章出版年份、标题及参与撰写的作者数量
     private String pubyear;
     private String article_title;
-    private int author_num;
+    private Integer author_num;
 
     public Article() {
     }
@@ -72,11 +72,11 @@ public class Article {
         return article_title;
     }
 
-    public void setAuthor_num(int author_num) {
+    public void setAuthor_num(Integer author_num) {
         this.author_num = author_num;
     }
 
-    public int getAuthor_num() {
+    public Integer getAuthor_num() {
         return author_num;
     }
 

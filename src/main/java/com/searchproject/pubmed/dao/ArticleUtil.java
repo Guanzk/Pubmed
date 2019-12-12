@@ -1,17 +1,19 @@
 package com.searchproject.pubmed.dao;
 
+import com.searchproject.pubmed.Bean.AffiliationCount;
 import com.searchproject.pubmed.Bean.AuthorInformation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
+@Component
 @Slf4j
-public class ArticleDao {
+public class ArticleUtil {
     private static ReadDataFromRedis redis = new ReadDataFromRedis();
-
+@Autowired
+AffiliationCountDao affiliationCountDao;
     public static HashMap<String, List<String>> getAffiliations(List<String> pmids) {
         HashMap<String, List<String>> res = new HashMap<>();
         for (String pmid : pmids) {//TODO 待改
@@ -29,12 +31,16 @@ public class ArticleDao {
         return res;
     }
 
-    public static HashMap<String, Integer> getAffiliationTotalPapers(Set<String> keySet) {
+    public HashMap<String, Integer> getAffiliationTotalPapers(Set<String> keySet) {
         HashMap<String, Integer> res = new HashMap<>();
         long start = System.currentTimeMillis();
-        res = (HashMap<String, Integer>) ReadArticleFromMySQL.getAffiliationsTotalPapers(new LinkedList<String>() {{
-            addAll(keySet);
-        }});
+        List<AffiliationCount>affiliationCounts=affiliationCountDao.findAllByAffiliationIn(new ArrayList<>(keySet));
+        for(AffiliationCount affiliationCount:affiliationCounts){
+            res.put(affiliationCount.getAffiliation(),affiliationCount.getTotal_count());
+        }
+//        res = (HashMap<String, Integer>) ReadArticleFromMySQL.getAffiliationsTotalPapers(new LinkedList<String>() {{
+//            addAll(keySet);
+//        }});
         long end = System.currentTimeMillis();
         log.debug("获取机构总文章数用时:" + (end - start));
         return res;

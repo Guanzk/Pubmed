@@ -4,7 +4,7 @@ import com.searchproject.pubmed.Bean.Article;
 
 import java.util.*;
 
-public class ArticleUtil {
+public class ArticleHelper {
 
     public static Map<String, List<Article>> sortArticlesByYear(HashMap<String, List<Article>> publicationsByYear) {
         Map<String, List<Article>> res = new TreeMap<String, List<Article>>(new Comparator<String>() {

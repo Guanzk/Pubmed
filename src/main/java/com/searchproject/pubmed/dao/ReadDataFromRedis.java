@@ -69,7 +69,7 @@ public class ReadDataFromRedis {
         jedis.select(5);
         List<String>res=new ArrayList<>(aids.size());
         for(String aid:aids){
-            if(jedis.get(aid)!=null){
+            if(jedis.smembers(aid)!=null){
                 res.add(aid);
             }
         }
