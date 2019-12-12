@@ -17,7 +17,7 @@ public class AuthorUtil {
         List<String> res = new LinkedList<>();
         for (String year : publicationsByYear.keySet()) {
             for (Article article : publicationsByYear.get(year)) {
-                res.add(article.getArticleTitle());
+                res.add(article.getArticle_title());
             }
         }
         return res;
@@ -59,7 +59,7 @@ public class AuthorUtil {
             }
             HashMap<String, Integer> keys = keywordsByYear.get(year);
             for (Article article : publicationsByYear.get(year)) {
-                Set<String> keywords = ReadDataFromRedis.getKeywordsFromPMID(redis, String.valueOf(article.getPMID()));
+                Set<String> keywords = ReadDataFromRedis.getKeywordsFromPMID(redis, String.valueOf(article.getPmid()));
                 for (String keyword : keywords) {
                     if (!keys.containsKey(keyword)) {
                         keys.put(keyword, 1);

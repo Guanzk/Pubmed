@@ -1,14 +1,17 @@
 package com.searchproject.pubmed.Bean;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Data
 @Entity
-@Table(name = "auhtor_list")
+@Table(name = "author_list")
 public class AuthorSimple {
     @Id
     private String aid;
-    private String FullName;
-    private String Pmid;
+    private String fullname;
+    private String pmid;
 }

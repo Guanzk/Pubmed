@@ -94,10 +94,10 @@ public class ReadArticleFromMySQL extends ReadDataFromMySQL {
 
     private static Article getArticlesSimpleFromMySQL(ResultSet rs) throws SQLException {
         Article n = new Article();
-        n.setPMID(rs.getInt(MySQLConfig.get("article_PMID")));
-        n.setArticleTitle(rs.getString(MySQLConfig.get("article_title")));
+//        n.setPmid(rs.getInt(MySQLConfig.get("article_PMID")));
+        n.setArticle_title(rs.getString(MySQLConfig.get("article_title")));
         n.setPubyear(rs.getString(MySQLConfig.get("article_pubyear")));
-        n.setAuthorNum(rs.getInt(MySQLConfig.get("article_author_num")));
+        n.setAuthor_num(rs.getInt(MySQLConfig.get("article_author_num")));
         return n;
     }
 }

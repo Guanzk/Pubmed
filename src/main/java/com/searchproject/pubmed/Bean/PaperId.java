@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 public class PaperId implements Serializable {
     @Id
-    private String PMID;
+    private String pmid;
     @Id
     private String aid;
 }

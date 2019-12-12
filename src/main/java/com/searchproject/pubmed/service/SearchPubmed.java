@@ -43,7 +43,7 @@ public class SearchPubmed{
             if (usefulAuthor == null) {
                 result="not found author";
 
-            } else {
+            } else {//改进，判断作者有无pmid
                 log.info("search:" + usefulAuthor.getAid());
                 author = QueryResult.processAuhtor(usefulAuthor.getAid());
                 String authorJson = MakeJson.makeAuthorJson(author);

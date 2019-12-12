@@ -42,7 +42,7 @@ public class ReadDataFromRedis {
     public static HashMap<String, List<String>> getPMIDfromaids(ReadDataFromRedis redis, List<AuthorInformation> relatedAuthors) {
         HashMap<String, List<String>> res = new HashMap<>();
         Jedis jedis = redis.getResource();
-
+        jedis.select(5);
         for (AuthorInformation a : relatedAuthors) {
             if (a.getAid().equals("0")) continue;//TODO 数据待优化，不然卡很久
             res.put(a.getAid(), new LinkedList<String>() {{
@@ -64,7 +64,18 @@ public class ReadDataFromRedis {
         jedis.close();
         return res;
     }
-
+    public static List<String>findUsefulAuthors(ReadDataFromRedis redis,List<String>aids){
+        Jedis jedis=redis.getResource();
+        jedis.select(5);
+        List<String>res=new ArrayList<>(aids.size());
+        for(String aid:aids){
+            if(jedis.get(aid)!=null){
+                res.add(aid);
+            }
+        }
+        jedis.close();
+        return res;
+    }
     private void initialPool() {
         JedisPoolConfig config = new JedisPoolConfig();
         //是否启用后进先出，默认为true

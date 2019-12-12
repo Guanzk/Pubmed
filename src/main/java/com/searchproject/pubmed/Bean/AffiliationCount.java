@@ -11,6 +11,6 @@ import javax.persistence.Table;
 @Table(name = "affiliation_pubyear_count")
 public class AffiliationCount {
     @Id
-    private String Affiliation;
+    private String affiliation;
     private int total_count;
 }

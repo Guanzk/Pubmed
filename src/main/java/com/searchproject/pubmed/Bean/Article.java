@@ -23,61 +23,61 @@ public class Article {
 
     //根据aid所检索获得的PMID进行文章相关信息的检索
     @Id
-    private int PMID;
+    private String pmid;
 
     //查询文章出版年份、标题及参与撰写的作者数量
-    private String Pubyear;
-    private String ArticleTitle;
-    private int AuthorNum;
+    private String pubyear;
+    private String article_title;
+    private int author_num;
 
     public Article() {
     }
 
     public Article(int pmid, String pubyear, String articleTitle, int authorNum) {
-        PMID = pmid;
-        Pubyear = pubyear;
-        ArticleTitle = articleTitle;
-        AuthorNum = authorNum;
+        pmid = pmid;
+        this.pubyear = pubyear;
+        article_title = articleTitle;
+        author_num = authorNum;
     }
 
     //返回所获得的结果集，为单行数据
     @Override
     public String toString() {
         String ans = "";
-        ans += "PMID:" + PMID + " Pubyear:" + Pubyear + " ArticleTile:" + ArticleTitle + " AuthorNum" + AuthorNum;
+        ans += "PMID:" + pmid + " Pubyear:" + pubyear + " ArticleTile:" + article_title + " AuthorNum" + author_num;
         return ans;
     }
 
-    public void setPMID(int PMID) {
-        this.PMID = PMID;
+    public void setPmid(String PMID) {
+        this.pmid = PMID;
     }
 
-    public int getPMID() {
-        return this.PMID;
+    public String getPmid() {
+        return this.pmid;
     }
 
     public void setPubyear(String pubyear) {
-        Pubyear = pubyear;
+        this.pubyear = pubyear;
     }
 
     public String getPubyear() {
-        return Pubyear;
+        return pubyear;
     }
 
-    public void setArticleTitle(String articleTile) {
-        ArticleTitle = articleTile;
+    public void setArticle_title(String articleTile) {
+        article_title = articleTile;
     }
 
-    public String getArticleTitle() {
-        return ArticleTitle;
+    public String getArticle_title() {
+        return article_title;
     }
 
-    public void setAuthorNum(int authorNum) {
-        AuthorNum = authorNum;
+    public void setAuthor_num(int author_num) {
+        this.author_num = author_num;
     }
 
-    public int getAuthorNum() {
-        return AuthorNum;
+    public int getAuthor_num() {
+        return author_num;
     }
 
 }

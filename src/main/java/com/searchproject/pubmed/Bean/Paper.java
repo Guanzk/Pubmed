@@ -13,15 +13,15 @@ import java.util.Map.Entry;
 @IdClass(PaperId.class)
 public class Paper {
     @Id
-    private String PMID;
-    private int AuthorRank;
-    private int AffiliationRank;
-    private String Affiliation;
-    private String Department;
-    private String Institution;
-    private String Email;
-    private String Zipcode;
-    private String Location;
+    private String pmid;
+    private int author_rank;
+    private int affiliation_rank;
+    private String affiliation;
+    private String department;
+    private String institution;
+    private String email;
+    private String zipcode;
+    private String location;
     @Id
     private String aid;
     private String city;

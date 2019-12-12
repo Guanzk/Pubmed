@@ -14,7 +14,7 @@ public class ArticleDao {
 
     public static HashMap<String, List<String>> getAffiliations(List<String> pmids) {
         HashMap<String, List<String>> res = new HashMap<>();
-        for (String pmid : pmids) {
+        for (String pmid : pmids) {//TODO 待改
             Set<String> affiliations = ReadDataFromRedis.getAffiliationfromPMID(redis, pmid);
             for (String affiliation : affiliations) {
                 if (!res.containsKey(affiliation)) {

@@ -106,7 +106,7 @@ public class MedEntity {
         List<String> res = new LinkedList<>();
         for (String year : publicationsByYear.keySet()) {
             for (Article a : publicationsByYear.get(year)) {
-                res.add(a.getArticleTitle());
+                res.add(a.getArticle_title());
             }
         }
         return res;
@@ -118,8 +118,8 @@ public class MedEntity {
         for (String year : publicationsByYear.keySet()) {
             int ref = 0;
             for (Article a : publicationsByYear.get(year)) {
-                if (!pmidCitation.containsKey(a.getPMID())) continue;
-                ref += pmidCitation.get(a.getPMID());
+                if (!pmidCitation.containsKey(a.getPmid())) continue;
+                ref += pmidCitation.get(a.getPmid());
             }
             res.put(year, ref);
         }
