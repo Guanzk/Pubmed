@@ -25,5 +25,5 @@ public class Paper {
     @Id
     private String aid;
     private String city;
-
+    private String country;
 }

@@ -11,17 +11,20 @@ import com.searchproject.pubmed.dao.ReadDataFromRedis;
 import com.searchproject.pubmed.util.MakeJson;
 import com.searchproject.pubmed.util.QueryResult;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
-
+@Component
 @Slf4j
 public class SearchPubmed{
 
-
-    public static String processPubmedSearch(String query) {
+@Autowired
+QueryResult queryResult;
+    public  String processPubmedSearch(String query) {
         log.info("———MessageReseived Function Process—-——————-");
         long startTime = System.currentTimeMillis();
         log.info("Query:" + query);
@@ -32,20 +35,19 @@ public class SearchPubmed{
         Set<String> entityPMIDS = ReadDataFromRedis.getPMIDfromEntity_Pool(redis, query);
        String result="";
 
+
         if (aid != null && aid.size() > 0) {
             log.info("aids:" + aid);//同名策略，待扩充
             List<String> aids = new ArrayList<>();
             aids.addAll(aid);
             aids.remove("0");
-
-            AuthorInformation usefulAuthor = ReadAuthorFromMySQL.findAuthorByAids(aids);
-
-            if (usefulAuthor == null) {
+            List<String>usefulAids=ReadDataFromRedis.findUsefulAuthors(redis,aids);
+            if (usefulAids.size() == 0) {
                 result="not found author";
 
             } else {//改进，判断作者有无pmid
-                log.info("search:" + usefulAuthor.getAid());
-                author = QueryResult.processAuhtor(usefulAuthor.getAid());
+                log.info("search:" + usefulAids.get(0));
+                author = queryResult.processAuhtor(usefulAids.get(0));
                 String authorJson = MakeJson.makeAuthorJson(author);
                 log.info(authorJson);
                 result=authorJson;
@@ -53,7 +55,7 @@ public class SearchPubmed{
 
         } else if (!entityPMIDS.isEmpty()) {
             log.info("开始查找医药实体");
-            MedEntity entity = QueryResult.processMedEntity(query);
+            MedEntity entity = queryResult.processMedEntity(query);
             String entityJson = MakeJson.makeEntityJson(entity);
             log.info("entity json:" + entityJson);
             result=entityJson;

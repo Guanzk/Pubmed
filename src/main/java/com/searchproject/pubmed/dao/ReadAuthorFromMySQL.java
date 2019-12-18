@@ -194,7 +194,7 @@ public class ReadAuthorFromMySQL extends ReadDataFromMySQL {
     private static AuthorInformation getAffiliationFromMySQL(ResultSet rs) throws SQLException {
         AuthorInformation n = new AuthorInformation();
         n.setAid(rs.getString(MySQLConfig.get("affiliation_aid")));
-        n.setPMID(rs.getInt(MySQLConfig.get("affiliation_PMID")));
+//        n.setPMID(rs.getInt(MySQLConfig.get("affiliation_PMID")));
         n.setAffiliation(rs.getString(MySQLConfig.get("affiliation_Affiliation")));
         n.setEmail(rs.getString(MySQLConfig.get("affiliation_Email")));
         n.setZipcode(rs.getString(MySQLConfig.get("affiliation_Zipcode")));

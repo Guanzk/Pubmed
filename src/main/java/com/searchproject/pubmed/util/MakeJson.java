@@ -232,7 +232,7 @@ public class MakeJson {
         JsonObject topicDistribution = new JsonObject();
         topicDistribution.addProperty("dimension", "TOPIC DISTRIBUTION");
         JsonArray topicDistributionData = new JsonArray();
-        List<String> top5Keywords = ArticleUtil.getTopKeywords(entity.getKeywordsByYear(), 5);
+        List<String> top5Keywords = ArticleHelper.getTopKeywords(entity.getKeywordsByYear(), 5);
         for (int i = 0; i < top5Keywords.size(); i++) {
             topicDistributionData.add(top5Keywords.get(i));
         }

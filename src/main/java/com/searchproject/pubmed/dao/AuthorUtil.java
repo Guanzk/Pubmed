@@ -1,16 +1,25 @@
 package com.searchproject.pubmed.dao;
 
 
-import com.searchproject.pubmed.Bean.Article;
-import com.searchproject.pubmed.Bean.Author;
-import com.searchproject.pubmed.Bean.AuthorInformation;
+import com.searchproject.pubmed.Bean.*;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import redis.clients.jedis.Tuple;
 
 import java.util.*;
 
+@Component
 @Slf4j
 public class AuthorUtil {
+    @Autowired
+    PaperDao paperDao;
+    @Autowired
+    AffiliationCountDao affiliationCountDao;
+    @Autowired
+    AuthorSimpleDao authorSimpleDao;
+    @Autowired
+    ArticleSimpleDao articleSimpleDao;
     private static ReadDataFromRedis redis = new ReadDataFromRedis();
 
     public static List<String> getPublicationTitle(HashMap<String, List<Article>> publicationsByYear) {
@@ -23,15 +32,27 @@ public class AuthorUtil {
         return res;
     }
 
-    public static AuthorInformation getAuthorInformation(String aid) {
-        AuthorInformation authorInformation = ReadAuthorFromMySQL.getAuthorFromAid(aid);
+    public  AuthorInformation getAuthorInformation(String aid) {
+//        AuthorInformation authorInformation = ReadAuthorFromMySQL.getAuthorFromAid(aid);
+        Paper authorSimple=paperDao.findTopByAid(aid);
+        AuthorInformation authorInformation=new AuthorInformation(){{
+            setAffiliation(authorSimple.getAffiliation());
+            setAid(authorSimple.getAid());
+            setCountry(authorSimple.getCountry());
+            setDepartment(authorSimple.getDepartment());
+            setEmail(authorSimple.getEmail());
+            setPMID(authorSimple.getPmid());
+        }};
         return authorInformation;
     }
 
-    public static HashMap<String, List<Article>> getPublicationsByYear(List<String> pmids) {
+    public HashMap<String, List<Article>> getPublicationsByYear(List<String> pmids) {
         HashMap<String, List<Article>> publicationsByYear = new HashMap<>();
-        List<Article> articles = ReadArticleFromMySQL.lookUp(pmids);
-        log.debug("获取文章相关数据成功");
+//        List<Article> articles = ReadArticleFromMySQL.lookUp(pmids);
+        long start=System.currentTimeMillis();
+        List<Article> articles=articleSimpleDao.findAllByPmidIn(pmids);
+        long end=System.currentTimeMillis();
+        log.debug("获取文章相关数据成功,用时："+(end-start));
         for (Article article : articles) {
             if (!publicationsByYear.containsKey(article.getPubyear())) {
                 ArrayList<Article> a = new ArrayList<>();
@@ -52,6 +73,7 @@ public class AuthorUtil {
 
     public static HashMap<String, HashMap<String, Integer>> getKeywordsByYear(HashMap<String, List<Article>> publicationsByYear) {
         HashMap<String, HashMap<String, Integer>> keywordsByYear = new HashMap<>();
+        long start=System.currentTimeMillis();
         for (String year : publicationsByYear.keySet()) {
 
             if (!keywordsByYear.containsKey(year)) {
@@ -70,6 +92,8 @@ public class AuthorUtil {
             }
             keywordsByYear.put(year, keys);
         }
+        long end=System.currentTimeMillis();
+        log.debug("getKeywordsByYear,用时："+(end-start));
         return keywordsByYear;
 
     }
@@ -102,7 +126,23 @@ public class AuthorUtil {
         log.info("get other expert size:" + aids.size());
         return authors;
     }
+    public  List<AuthorInformation> getEntityRelatedAuthors(List<String> pmids) {
+//        List<AuthorInformation> res = ReadAuthorFromMySQL.getAuthorsFromPmids(pmids);
 
+        long start = System.currentTimeMillis();
+        List<Paper>papers=paperDao.findAllByPmidIn(pmids);
+        List<AuthorInformation> res=new ArrayList<>(papers.size());
+        for(Paper paper:papers){
+            res.add(new AuthorInformation(){{
+                setAid(paper.getAid());
+            }});
+        }
+        res = ReadDataFromRedis.getKeywordsFromAids(redis, res);
+
+        long end = System.currentTimeMillis();
+        log.debug("获取医药实体相关作者用时：" + (end - start));
+        return res;
+    }
     public static HashMap<String, Integer> getAuthorKeywords(String aid) {
         Set<Tuple> top5Tuple = ReadDataFromRedis.getKeywordsFromAid(redis, aid);
         HashMap<String, Integer> keywords = new HashMap<>();
