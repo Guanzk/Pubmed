@@ -4,9 +4,7 @@ package com.searchproject.pubmed.service;
 
 import com.searchproject.pubmed.Bean.Article;
 import com.searchproject.pubmed.Bean.Author;
-import com.searchproject.pubmed.Bean.AuthorInformation;
 import com.searchproject.pubmed.Bean.MedEntity;
-import com.searchproject.pubmed.dao.ReadAuthorFromMySQL;
 import com.searchproject.pubmed.dao.ReadDataFromRedis;
 import com.searchproject.pubmed.util.MakeJson;
 import com.searchproject.pubmed.util.QueryResult;
