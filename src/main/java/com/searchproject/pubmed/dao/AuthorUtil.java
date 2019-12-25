@@ -1,6 +1,7 @@
 package com.searchproject.pubmed.dao;
 
 
+import com.google.common.collect.Lists;
 import com.searchproject.pubmed.Bean.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,7 @@ public class AuthorUtil {
         HashMap<String, List<Article>> publicationsByYear = new HashMap<>();
 //        List<Article> articles = ReadArticleFromMySQL.lookUp(pmids);
         long start=System.currentTimeMillis();
-        List<Article> articles=articleSimpleDao.findAllByPmidIn(pmids);
+        List<Article> articles=articleSimpleDao.findAllByPmidIn(Lists.partition(pmids,20).get(0));//TODO mongo
         long end=System.currentTimeMillis();
         log.debug("获取文章相关数据成功,用时："+(end-start));
         for (Article article : articles) {
@@ -130,7 +131,7 @@ public class AuthorUtil {
 //        List<AuthorInformation> res = ReadAuthorFromMySQL.getAuthorsFromPmids(pmids);
 
         long start = System.currentTimeMillis();
-        List<Paper>papers=paperDao.findAllByPmidIn(pmids);
+        List<Paper>papers=paperDao.findAllByPmidIn(Lists.partition(pmids,20).get(0));
         List<AuthorInformation> res=new ArrayList<>(papers.size());
         for(Paper paper:papers){
             res.add(new AuthorInformation(){{
