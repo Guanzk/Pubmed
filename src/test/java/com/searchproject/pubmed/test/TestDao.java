@@ -33,7 +33,7 @@ public class TestDao {
 MongoUserRepository mongoUserRepository;
     @Test
     public void test(){
-        ArticleMongo u=mongoUserRepository.findByPmid(22);
+        ArticleMongo u=mongoUserRepository.findByPmid(622);
         System.out.println(u);
 //        ReadDataFromRedis redis=new ReadDataFromRedis();
 //        String query="u kissel";

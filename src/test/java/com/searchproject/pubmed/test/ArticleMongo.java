@@ -1,5 +1,6 @@
 package com.searchproject.pubmed.test;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,7 +13,9 @@ public class ArticleMongo {
     private String pubyear;
 
     private List<String> keywords;
+
     @Id
+    private ObjectId _id;
     private Integer pmid;
 
     private String title;
