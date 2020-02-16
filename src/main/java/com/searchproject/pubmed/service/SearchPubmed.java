@@ -2,10 +2,13 @@ package com.searchproject.pubmed.service;
 
 
 
-import com.searchproject.pubmed.Bean.Article;
-import com.searchproject.pubmed.Bean.Author;
-import com.searchproject.pubmed.Bean.MedEntity;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.searchproject.pubmed.Bean.*;
+import com.searchproject.pubmed.dao.MongoDao;
 import com.searchproject.pubmed.dao.ReadDataFromRedis;
+import com.searchproject.pubmed.dao.RedisDao;
+import com.searchproject.pubmed.util.ExpertHelper;
 import com.searchproject.pubmed.util.MakeJson;
 import com.searchproject.pubmed.util.QueryResult;
 import lombok.extern.slf4j.Slf4j;
@@ -19,9 +22,12 @@ import java.util.Set;
 @Component
 @Slf4j
 public class SearchPubmed{
-
+@Autowired
+    RedisDao redisDao;
 @Autowired
 QueryResult queryResult;
+@Autowired
+    MongoDao mongoDao;
     public  String processPubmedSearch(String query) {
         log.info("———MessageReseived Function Process—-——————-");
         long startTime = System.currentTimeMillis();
@@ -30,7 +36,7 @@ QueryResult queryResult;
         Author author = new Author();
         ReadDataFromRedis redis = new ReadDataFromRedis();
         Set<String> aid = ReadDataFromRedis.getAidSetFromFullname(redis, query);
-        Set<String> entityPMIDS = ReadDataFromRedis.getPMIDfromEntity_Pool(redis, query);
+        Set<String> entityPMIDS = ReadDataFromRedis.getPMIDfromEntity_Pool(redis, query);//TODO 有可能pmid太多
        String result="";
 
 
@@ -67,7 +73,45 @@ QueryResult queryResult;
 
         return result;
     }
+    //使用MOngo
+    public  String processPubmedQuery(String query) {
+        log.info("———MessageReseived Function Process—-——————-");
+        log.debug("use mongo database");
+        long startTime = System.currentTimeMillis();
+        log.info("Query:" + query);
+        query = query.toLowerCase();
+        Set<String> aid = redisDao.getAidSet(query);
+        Set<String> entityPMIDS = redisDao.getPmidSet(query);
+        String result="";
 
+
+        if (aid != null && aid.size() > 0) {
+            log.info("aids:" + aid);
+            aid.remove("0");
+            List<String>aids=new ArrayList<>(aid);
+            if(aids.size()==1){
+                result=searchAid(aids.get(0));
+            }else{
+                List<ExpertMongo> experts=mongoDao.getExperts(aids);
+                result=MakeJson.getMultiExpertJson(experts);
+            }
+
+        } else if (!entityPMIDS.isEmpty()) {
+            log.info("开始查找医药实体");
+            EntityMongo entity=mongoDao.getEntity(query);//TODO 相似名字提醒
+            String entityJson = MakeJson.getEntityJson(entity);
+            log.info("entity json:" + entityJson);
+            result=entityJson;
+
+        } else {
+            log.info("can not find query");
+            result="not found query";
+        }
+        long finishQueryTime = System.currentTimeMillis();
+        log.info("process time:" + (finishQueryTime - startTime));
+
+        return result;
+    }
     private HashMap<String, Integer> pubyearCount(List<Article> articles) {
         HashMap<String, Integer> res = new HashMap<>();
         for (Article article : articles) {
@@ -79,5 +123,24 @@ QueryResult queryResult;
             }
         }
         return res;
+    }
+    Gson gson= new GsonBuilder().create();
+    public String searchAid(String aid) {
+        log.info("search aid:"+aid);
+        long start=System.currentTimeMillis();
+
+
+        ExpertMongo expert=mongoDao.getExpert(Long.parseLong(aid));
+        log.debug(gson.toJson(expert));
+        List<String>relatedAids= ExpertHelper.getRelatedAids(expert);
+        relatedAids.remove("0");
+        log.info("size:"+relatedAids.size()+gson.toJson(relatedAids));
+        List<ExpertMongo>relatedExperts=mongoDao.getExperts(relatedAids);
+        log.debug(gson.toJson(relatedExperts));
+        String result=MakeJson.getExpertJson(expert,relatedExperts);
+        long end=System.currentTimeMillis();
+        log.debug(result);
+        log.info("用时:"+(end-start));
+        return result;
     }
 }

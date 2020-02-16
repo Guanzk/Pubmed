@@ -13,4 +13,5 @@ message QueryResponse {
 
 service SearchService {
     rpc searchQuery(QueryRequest) returns (QueryResponse);
+    rpc searchAid(QueryRequest) returns (QueryResponse);
 }

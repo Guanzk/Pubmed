@@ -1,21 +1,13 @@
 package com.searchproject.pubmed.test;
 
-import com.searchproject.pubmed.Bean.AffiliationCount;
-import com.searchproject.pubmed.Bean.Article;
-import com.searchproject.pubmed.Bean.AuthorSimple;
-import com.searchproject.pubmed.Bean.Paper;
-import com.searchproject.pubmed.dao.*;
+import com.searchproject.pubmed.Bean.ExpertMongo;
+import com.searchproject.pubmed.dao.MongoExpertRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Example;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -30,11 +22,12 @@ public class TestDao {
 //    @Autowired
 //    ArticleSimpleDao articleSimpleDao;
 @Autowired
-MongoUserRepository mongoUserRepository;
+    MongoExpertRepository mongoExpertRepository;
     @Test
     public void test(){
-        ArticleMongo u=mongoUserRepository.findByPmid(622);
-        System.out.println(u);
+        ExpertMongo expert=mongoExpertRepository.findByAid(2756153);
+        log.info(expert.getAffiliations().get(0).getAuthors().get(0));
+
 //        ReadDataFromRedis redis=new ReadDataFromRedis();
 //        String query="u kissel";
 //        List<String> aid =new ArrayList<>(ReadDataFromRedis.getAidSetFromFullname(redis, query));

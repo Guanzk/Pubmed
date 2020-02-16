@@ -1,4 +1,4 @@
-package com.searchproject.pubmed.Bean;
+package com.searchproject.pubmed.Bean.auxiliary;
 
 import lombok.Data;
 

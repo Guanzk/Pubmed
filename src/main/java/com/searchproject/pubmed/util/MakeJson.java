@@ -2,12 +2,14 @@ package com.searchproject.pubmed.util;
 
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.searchproject.pubmed.Bean.Article;
-import com.searchproject.pubmed.Bean.Author;
-import com.searchproject.pubmed.Bean.AuthorInformation;
-import com.searchproject.pubmed.Bean.MedEntity;
+import com.searchproject.pubmed.Bean.*;
+import com.searchproject.pubmed.Bean.auxiliary.CoAuthorMongo;
+import com.searchproject.pubmed.Bean.auxiliary.PmidMongo;
+import com.searchproject.pubmed.Bean.json.*;
 import com.searchproject.pubmed.dao.AuthorUtil;
 import lombok.extern.slf4j.Slf4j;
 
@@ -117,6 +119,56 @@ public class MakeJson {
 //        container.add("visual",visual);
 
         return container.toString();
+    }
+    public static String getExpertJson(ExpertMongo expert,List<ExpertMongo>relatedExpert){
+        Gson gson=new Gson();
+        Info_card info_card=new Info_card(expert);
+//        log.info(gson.toJson(info_card));
+        Dimensions_data publication_data=Dimensions_data.createPublicationDimension(expert);
+//        log.info(gson.toJson(publication_data));
+
+        Dimensions_data interest_data=Dimensions_data.createInterestDimension(expert);
+//        log.info(gson.toJson(interest_data));
+
+        Dimensions_data evoluation_data=Dimensions_data.createEvolutionDimension(expert);
+//        log.info(gson.toJson(evoluation_data));
+
+        Dimensions_data topicData=Dimensions_data.createTopicDimension(expert,relatedExpert);
+//        log.info(gson.toJson(topicData));
+
+        Dimensions_data coAuthorData=new Dimensions_data("Cooperation scholars","ins_scholars_relation",ExpertHelper.getKNames(3,relatedExpert));
+//        log.info(gson.toJson(coAuthorData));
+
+        Dimensions_data articleData=new Dimensions_data("Articles",null,ExpertHelper.getKArticle(5,expert));
+//        log.info(gson.toJson(articleData));
+        ArrayList<Dimensions_data>dimensions_data=new ArrayList<Dimensions_data>(){{
+            add(publication_data);
+            add(interest_data);
+            add(evoluation_data);
+            add(topicData);
+            add(coAuthorData);
+            add(articleData);
+        }};
+        ExpertRoot root=new ExpertRoot(dimensions_data,info_card,getExpertVisual(expert,relatedExpert));
+
+        return  gson.toJson(root);
+    }
+
+    private static Visual getExpertVisual(ExpertMongo expert,List<ExpertMongo>relatedExperts) {
+        Evolution evolution=new Evolution("Evolution of expert research field",ExpertHelper.getEvolution(expert));
+        Evolution_river evolution_river=new Evolution_river(evolution);
+
+        Experts_distribution_tree experts_distribution_tree=new Experts_distribution_tree("Expert distribution",ExpertHelper.getDistribution(relatedExperts));
+        ArrayList<Node>nodes=new ArrayList<Node>(){{
+            for(ExpertMongo reE :relatedExperts){
+                add(new Node(reE.getFullname(),reE.getCitation()));}
+        }};
+
+        Ins_scholars_relation ins_scholars_relation=new Ins_scholars_relation(expert.getRelation(),"Expert atlas and influence");
+        Interest_pie interest_pie=new Interest_pie("Interest distribution",ExpertHelper.getKeywordsDistribution(5,expert));
+        Publication_bar publication_bar=new Publication_bar("Publication",ExpertHelper.getPublicationDistribution(expert));
+        Visual visual=new Visual(evolution_river,experts_distribution_tree,ins_scholars_relation,interest_pie,publication_bar);
+        return visual;
     }
 
     private static JsonObject getAuthorVisualData(Author author) {
@@ -416,5 +468,43 @@ public class MakeJson {
 
 //        System.out.println(makeAuthorJson(a));
 
+    }
+
+    public static String getMultiExpertJson(List<ExpertMongo> experts) {
+        ArrayList<SimpleExpert>simpleExperts=new ArrayList<SimpleExpert>();
+            log.info(experts.size()+"same expert size");
+            for(ExpertMongo expert:experts){
+               simpleExperts.add(new SimpleExpert(expert));
+            }
+
+
+            MultiExpertsInfoCard multiExpertsInfoCard=new MultiExpertsInfoCard(simpleExperts);
+            Gson gson=new GsonBuilder().create();
+            return gson.toJson(multiExpertsInfoCard);
+    }
+
+    public static String getEntityJson(EntityMongo entity) {
+
+        EntityInfoCard info_card=new EntityInfoCard(entity);
+
+        List<Dimensions_data>dimensions_data=new ArrayList<>();
+        dimensions_data.add(Dimensions_data.createPopularityDimension(entity));
+        dimensions_data.add(Dimensions_data.createTopicDimension(entity));
+        dimensions_data.add(Dimensions_data.createGeographicDimension(entity));
+        dimensions_data.add(Dimensions_data.createOrganizationDimension(entity));
+        dimensions_data.add(Dimensions_data.createExpertDimension(entity));
+        dimensions_data.add(Dimensions_data.createArticlesDimension(entity));
+
+        PopularityLinefold popularityLinefold=new PopularityLinefold(entity);
+        Topic_pie topic_pie=new Topic_pie(entity);
+        Ins_drug_radar ins_drug_radar=new Ins_drug_radar(entity);
+        Related_organizations_bar related_organizations_bar=new Related_organizations_bar(entity);
+        Expert_atlas_relation relation=new Expert_atlas_relation(entity);
+        EntityVisual visual=new EntityVisual(popularityLinefold,topic_pie,ins_drug_radar,related_organizations_bar,relation);
+
+        EntityJson entityJson=new EntityJson(info_card,dimensions_data,visual);
+        Gson gson=new Gson();
+
+        return gson.toJson(entityJson);
     }
 }

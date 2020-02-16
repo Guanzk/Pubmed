@@ -15,10 +15,21 @@ public class searchServiceImpl extends SearchServiceGrpc.SearchServiceImplBase  
     public void searchQuery(QueryRequest request,
                             StreamObserver<QueryResponse> responseObserver) {
             String query=request.getQuery();
-            String json=searchPubmed.processPubmedSearch(query);
+            String json=searchPubmed.processPubmedQuery(query);
             QueryResponse response=QueryResponse.newBuilder().setResponse(json).build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
     }
+    @Override
+    public void searchAid(QueryRequest request,
+                            StreamObserver<QueryResponse> responseObserver) {
+        String aid=request.getQuery();
+        String json=searchPubmed.searchAid(aid);
+        QueryResponse response=QueryResponse.newBuilder().setResponse(json).build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+
 
 }

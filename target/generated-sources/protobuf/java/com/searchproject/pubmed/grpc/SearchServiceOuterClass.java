@@ -36,10 +36,13 @@ public final class SearchServiceOuterClass {
       "\n\023SearchService.proto\022\035com.searchproject" +
       ".pubmed.grpc\032\023SearchRequest.proto\"\035\n\014Que" +
       "ryRequest\022\r\n\005query\030\001 \001(\t\"!\n\rQueryRespons" +
-      "e\022\020\n\010response\030\001 \001(\t2y\n\rSearchService\022h\n\013" +
-      "searchQuery\022+.com.searchproject.pubmed.g" +
-      "rpc.QueryRequest\032,.com.searchproject.pub" +
-      "med.grpc.QueryResponseB\002P\001b\006proto3"
+      "e\022\020\n\010response\030\001 \001(\t2\341\001\n\rSearchService\022h\n" +
+      "\013searchQuery\022+.com.searchproject.pubmed." +
+      "grpc.QueryRequest\032,.com.searchproject.pu" +
+      "bmed.grpc.QueryResponse\022f\n\tsearchAid\022+.c" +
+      "om.searchproject.pubmed.grpc.QueryReques" +
+      "t\032,.com.searchproject.pubmed.grpc.QueryR" +
+      "esponseB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

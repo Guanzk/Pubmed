@@ -1,6 +1,6 @@
 package com.searchproject.pubmed.dao;
 
-import com.searchproject.pubmed.Bean.AffiliationCount;
+import com.searchproject.pubmed.Bean.auxiliary.AffiliationCount;
 import com.searchproject.pubmed.Bean.AuthorInformation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
