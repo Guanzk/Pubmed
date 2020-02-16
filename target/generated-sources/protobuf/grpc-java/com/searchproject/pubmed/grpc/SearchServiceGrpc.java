@@ -58,6 +58,37 @@ public final class SearchServiceGrpc {
     return getSearchQueryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.searchproject.pubmed.grpc.QueryRequest,
+      com.searchproject.pubmed.grpc.QueryResponse> getSearchAidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "searchAid",
+      requestType = com.searchproject.pubmed.grpc.QueryRequest.class,
+      responseType = com.searchproject.pubmed.grpc.QueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.searchproject.pubmed.grpc.QueryRequest,
+      com.searchproject.pubmed.grpc.QueryResponse> getSearchAidMethod() {
+    io.grpc.MethodDescriptor<com.searchproject.pubmed.grpc.QueryRequest, com.searchproject.pubmed.grpc.QueryResponse> getSearchAidMethod;
+    if ((getSearchAidMethod = SearchServiceGrpc.getSearchAidMethod) == null) {
+      synchronized (SearchServiceGrpc.class) {
+        if ((getSearchAidMethod = SearchServiceGrpc.getSearchAidMethod) == null) {
+          SearchServiceGrpc.getSearchAidMethod = getSearchAidMethod =
+              io.grpc.MethodDescriptor.<com.searchproject.pubmed.grpc.QueryRequest, com.searchproject.pubmed.grpc.QueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "searchAid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.searchproject.pubmed.grpc.QueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.searchproject.pubmed.grpc.QueryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SearchServiceMethodDescriptorSupplier("searchAid"))
+              .build();
+        }
+      }
+    }
+    return getSearchAidMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -92,6 +123,13 @@ public final class SearchServiceGrpc {
       asyncUnimplementedUnaryCall(getSearchQueryMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void searchAid(com.searchproject.pubmed.grpc.QueryRequest request,
+        io.grpc.stub.StreamObserver<com.searchproject.pubmed.grpc.QueryResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getSearchAidMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -101,6 +139,13 @@ public final class SearchServiceGrpc {
                 com.searchproject.pubmed.grpc.QueryRequest,
                 com.searchproject.pubmed.grpc.QueryResponse>(
                   this, METHODID_SEARCH_QUERY)))
+          .addMethod(
+            getSearchAidMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.searchproject.pubmed.grpc.QueryRequest,
+                com.searchproject.pubmed.grpc.QueryResponse>(
+                  this, METHODID_SEARCH_AID)))
           .build();
     }
   }
@@ -130,6 +175,14 @@ public final class SearchServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSearchQueryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void searchAid(com.searchproject.pubmed.grpc.QueryRequest request,
+        io.grpc.stub.StreamObserver<com.searchproject.pubmed.grpc.QueryResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSearchAidMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +208,13 @@ public final class SearchServiceGrpc {
     public com.searchproject.pubmed.grpc.QueryResponse searchQuery(com.searchproject.pubmed.grpc.QueryRequest request) {
       return blockingUnaryCall(
           getChannel(), getSearchQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.searchproject.pubmed.grpc.QueryResponse searchAid(com.searchproject.pubmed.grpc.QueryRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSearchAidMethod(), getCallOptions(), request);
     }
   }
 
@@ -183,9 +243,18 @@ public final class SearchServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSearchQueryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.searchproject.pubmed.grpc.QueryResponse> searchAid(
+        com.searchproject.pubmed.grpc.QueryRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSearchAidMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH_QUERY = 0;
+  private static final int METHODID_SEARCH_AID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -206,6 +275,10 @@ public final class SearchServiceGrpc {
       switch (methodId) {
         case METHODID_SEARCH_QUERY:
           serviceImpl.searchQuery((com.searchproject.pubmed.grpc.QueryRequest) request,
+              (io.grpc.stub.StreamObserver<com.searchproject.pubmed.grpc.QueryResponse>) responseObserver);
+          break;
+        case METHODID_SEARCH_AID:
+          serviceImpl.searchAid((com.searchproject.pubmed.grpc.QueryRequest) request,
               (io.grpc.stub.StreamObserver<com.searchproject.pubmed.grpc.QueryResponse>) responseObserver);
           break;
         default:
@@ -270,6 +343,7 @@ public final class SearchServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SearchServiceFileDescriptorSupplier())
               .addMethod(getSearchQueryMethod())
+              .addMethod(getSearchAidMethod())
               .build();
         }
       }
