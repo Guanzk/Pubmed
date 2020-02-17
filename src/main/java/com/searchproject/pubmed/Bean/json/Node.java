@@ -12,4 +12,5 @@ public class Node {
         setValue(citation);
     }
     public Node(){}
+
 }

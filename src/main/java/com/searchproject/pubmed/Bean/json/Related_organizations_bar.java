@@ -1,6 +1,5 @@
 package com.searchproject.pubmed.Bean.json;
 
-import com.alibaba.druid.sql.dialect.oracle.ast.stmt.OracleCreateTableStatement;
 import com.google.gson.annotations.SerializedName;
 import com.searchproject.pubmed.Bean.EntityMongo;
 import com.searchproject.pubmed.util.EntityHelper;

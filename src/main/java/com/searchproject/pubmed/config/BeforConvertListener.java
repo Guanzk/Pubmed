@@ -20,6 +20,11 @@ public class BeforConvertListener  extends AbstractMongoEventListener<ExpertMong
         if(!document.containsKey("coAuthors")){
             document.put("coAuthors",new ArrayList<>());
             log.debug("缺少coAuthors"+document.toJson());
+        }else{
+            ArrayList<Document>coAuthors= (ArrayList<Document>) document.get("coAuthors");
+            for(Document d:coAuthors){
+                if(d.get("aid")==null)d.put("aid",-1);
+            }
         }
     }
 }

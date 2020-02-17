@@ -1,6 +1,6 @@
 package com.searchproject.pubmed;
 
-import com.searchproject.pubmed.config.MySQLConfig;
+//import com.searchproject.pubmed.config.MySQLConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.util.ResourceUtils;
