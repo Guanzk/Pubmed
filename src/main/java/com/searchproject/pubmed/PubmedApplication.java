@@ -3,11 +3,13 @@ package com.searchproject.pubmed;
 //import com.searchproject.pubmed.config.MySQLConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
+@EnableScheduling
 @SpringBootApplication
 public class PubmedApplication {
 

@@ -41,9 +41,9 @@ public class TestRedis {
 //        log.info(searchPubmed.searchAid("1763228"));
 //        log.info(searchPubmed.searchAid("1763228"));//6064464,6474403
         String aid="23";
-        String name="v peterson";
-//        log.info(searchPubmed.processPubmedQuery(name));
-        log.info(searchPubmed.searchAid(aid));
+        String name="j w liu";
+        log.info(searchPubmed.processPubmedQuery(name));
+//        log.info(searchPubmed.searchAid(aid));
 
 //        ExpertMongo expert=mongoDao.getExpert(Long.parseLong(aid));
 //
