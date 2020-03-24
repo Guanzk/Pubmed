@@ -1,7 +1,0 @@
-syntax = "proto3";
-option java_multiple_files = true;
-package com.searchproject.pubmed.grpc;
-
-message SearchRequest {
-    string username = 1;
-}

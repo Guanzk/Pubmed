@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.searcproject</groupId>
-    <artifactId>front</artifactId>
+    <artifactId>data</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>controller-fornt</name>
+    <name>controller-data</name>
     <description>search front dispatch</description>
 
     <properties>
@@ -44,6 +44,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
 
 
     </dependencies>

@@ -1,6 +1,6 @@
 package com.searchproject.pubmed.config;
 
-import com.searchproject.pubmed.grpc.SearchServiceGrpc;
+import com.searchproject.pubmed.grpc.FuzzySearchGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +19,7 @@ public class GrpcConfig {
 
 
     @Bean
-    SearchServiceGrpc.SearchServiceBlockingStub searchServiceBlockingStub(ManagedChannel channel){
-        return SearchServiceGrpc.newBlockingStub(channel);
+    FuzzySearchGrpc.FuzzySearchBlockingStub fuzzySearchBlockingStub(ManagedChannel channel){
+        return FuzzySearchGrpc.newBlockingStub(channel);
     }
 }
