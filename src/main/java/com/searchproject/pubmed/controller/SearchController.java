@@ -1,5 +1,6 @@
 package com.searchproject.pubmed.controller;
 
+import com.google.gson.Gson;
 import com.searchproject.pubmed.grpc.QueryRequest;
 import com.searchproject.pubmed.grpc.QueryResponse;
 import com.searchproject.pubmed.grpc.SearchServiceGrpc;
@@ -33,9 +34,23 @@ public class SearchController {
         log.info("检索:"+aid+"完成，用时："+(end-start));
         return response.getResponse();
     }
+    @RequestMapping(value = "/searchAi/{query}",method = RequestMethod.GET)
+    public String searchAi(@PathVariable("query")String query){
+        log.info("收到ai请求"+query);
+        long start=System.currentTimeMillis();
+        QueryResponse response=this.searchServiceBlockingStub.searchAi(QueryRequest.newBuilder().setQuery(query).build());
+        long end=System.currentTimeMillis();
+        log.info("检索:"+query+"完成，用时："+(end-start));
+        return response.getResponse();
+    }
     @RequestMapping(value="/getECommerce/{product}",method = RequestMethod.GET)
     public String getProductJson(@PathVariable("product")String product){
         return SearchProduct.search(product);
+    }
+    @RequestMapping(value="/getPossibleProduct/{product}",method = RequestMethod.GET)
+    public String getPossibleProduct(@PathVariable("product")String product){
+        Gson gson=new Gson();
+        return gson.toJson(this.searchServiceBlockingStub.searchPossibleProduct(QueryRequest.newBuilder().setQuery(product).build()).getResponseList());
     }
 }
 
