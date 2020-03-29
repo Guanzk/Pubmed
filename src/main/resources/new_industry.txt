@@ -1,0 +1,685 @@
+security
+transportation
+manufacture
+government
+hardware
+education
+finance
+retail
+media
+medical
+stock forecast
+decision support system
+electricity market
+financial market
+forecast exchange rates
+mutual fund
+supply chain management
+credit card fraud
+social choice theory
+wholesale markets
+retail electricity market
+credit risk modeling
+bank security
+real estate management
+market basket analysis
+venture capital investment
+financial distress forecast
+quantitative trading
+e learning
+virtual learning
+computer education
+medical education
+higher education
+student information system
+distance learning
+improve students learning
+learning management system
+teaching model
+teaching quality assessment system
+cognitive science
+collaborative learning
+information system education
+predicting academic performance
+patient care
+heart disease predict diagnosis
+protein interaction
+lung cancer diagnosis and treating
+medical diagnosis
+microbial
+hepatitis virus infection
+molecular biology
+autism spectrum disorders
+cardiovascular diseases
+function brain imaging studies
+malaria borne diseases
+tumor classification
+psychiatric diseases
+health system
+dual x ray classification
+viral infection
+electronic health records
+peripheral central nervous system
+biomedical research
+blood glucose control
+chronic illness care
+predict tumor position and motion
+human brain project
+classify prostate cancer
+insulin resistance
+blood pressure estimate
+drug discovery
+disease control and prevention
+food safety
+gene expression
+influenza virus infection
+iris recognition
+bacterial infections
+human genome project
+allergic diseases
+public management
+government information system
+e government
+geographic information system
+vehicle information systems
+transportation management system
+urban planning
+air traffic management and control
+traffic management system
+wireless sensor networks
+urban traffic control
+estimate channel density
+traffic flow prediction
+travel time prediction
+road transportation system
+wireless communication
+urban traffic management
+intelligent transportation systems
+driver assistance systems
+real time signal processing
+traffic sign recognition
+pedestrian detection
+vehicle detection
+traffic speed estimation
+road safety evaluation
+congestion control
+intrusion prevention system
+railway signal system
+social network analysis
+content based retrieval
+web retrieval
+information retrieval
+sentiment classification
+image retrieval
+user behavior predict
+multimedia content retrieval
+social media analysis
+streaming data classification
+web search engines
+computational linguistics
+recommendation
+viral marketing
+speech recognition
+internet business
+location based service
+biological system
+human computer interaction
+human activity recognition
+mobile computing system
+cognitive science
+robot control system
+multi robot system
+quantum information science
+unmanned aerial vehicle
+human visual system
+simulate human cognition
+robot path planning
+human pose estimation
+autonomous robotic systems
+mobile robot control
+electro hydraulic system
+multi camera systems
+satellite attitude control
+intelligent control systems
+video signal processing
+sensor
+intelligent hardware
+intelligent electrical equipment
+computer vision
+supply chain management
+customer relationship management
+procurement management
+enterprise management
+enterprise resource planning
+industrial information
+industrial control system
+tool wear modeling
+mining industry
+intelligent manufacture
+air temperature control system
+information system security
+intrusion detection
+private information retrieval
+cooperative information systems
+cloud computing
+information security policy
+secure voting
+security
+encryption
+system security
+disaster detection
+agriculture
+robot control system
+cell
+disorders
+muscle
+governance
+control
+financial market
+urban planning
+investement
+infrastructure
+government information
+air
+genomics
+iot
+human
+disease prevention
+signaling
+bacterial infections
+learn to rank
+big data
+geographic
+computer education
+prevention
+semantic
+road
+industrial control system
+medical education
+proteins
+traveller
+mobile robot control
+spectra
+gene expression
+flaw
+mining
+investment
+psychiatric diseases
+chronic illness care
+dual x ray classification
+treatment
+search engines
+ha
+shop
+broadband
+health
+medicine
+electro hydraulic system
+strategic
+mobile
+nuclei
+channel
+game theory
+nursing
+market basket
+tertiary
+vessel
+tax
+virtual learning
+patient
+hepatitis virus infection
+economic
+provision
+grades
+monitoring
+linguistics
+sentiment
+aviation
+recognition
+procurement management
+cancer
+augmented reality
+business
+streaming
+nervous
+coal
+treatments
+protein interaction
+accine
+transportation management system
+insulin
+secure voting
+disorder
+social media
+financial markets
+pathogenicity
+prescription
+distance
+automated drive
+student information system
+language
+virtual reality
+wireless communication
+patient care
+financial distress forecast
+transportation
+community detection
+signal
+infection
+biomedical research
+disease control
+diagnosing
+abstract summary
+banks
+social networks
+learning system
+system security
+streaming data classification
+human genome project
+predicting academic performance
+computer interaction
+blood glucose control
+clicking
+credit card fraud
+tool
+behavior
+travel
+cloud
+urban traffic management
+product
+natural language process
+retrieval
+seasonal
+flow prediction
+human activity recognition
+traffic sign recognition
+teaching quality assessment system
+human brain project
+psychiatric
+policy
+electricity market
+molecular
+friends
+highway
+pharmaceutical
+improve students learning
+courses
+stock
+information system education
+reasoning
+stock market
+liver
+wireless sensor networks
+teaching model
+viral infection
+resistant
+borne
+spectrum disorder
+unmanned aerial vehicle
+traffic sign
+influenza virus infection
+venture capital investment
+street
+zurich
+graph
+fraud
+chain
+driver assistance
+student information
+treating
+organisation
+assessment
+hepatitis
+multi
+predict tumor position and motion
+enterprise
+learning systems
+urban traffic control
+incidences
+unmanned
+human activity
+predictive analysis
+autism spectrum disorders
+video
+agriculture
+aerial
+tumors
+multimedia content retrieval
+brain
+biomedical
+learning management system
+speech recognition
+market basket analysis
+social influence
+multimedia content
+electronic records
+collaborative learning
+biological system
+air traffic management and control
+parse
+autonomous robotic
+forecast exchange rates
+music
+prices
+insulin resistance
+planning
+question answer
+e business
+traffic speed estimation
+internet of things
+disease
+autism
+exchange rate
+strategy
+wholesale markets
+teaching
+manufacturing
+spectrum
+autism spectrum
+stock forecast
+quantum
+air temperature
+account takeover
+motorway
+organization
+camera
+ranking
+patients
+spectroscopy
+classify prostate cancer
+virtual-learning
+diagnosis
+internet to thing
+intrusion
+manufacture
+student
+autonomous robotic systems
+nurse
+therapy
+human visual system
+risk
+intelligent electrical equipment
+bank
+peripheral
+malaria
+content based retrieval
+human pose
+translation
+sensor
+electronic health records
+lung cancer
+inflammatory
+interaction
+cloud computing
+robot
+weakness
+building
+tool wear modeling
+human computer interaction
+price prediction
+railway signal system
+web retrieval
+diseases
+driver assistance systems
+chemical
+multimedia
+encryption
+tumor
+trade
+stock markets
+tumor position
+trading
+intersection
+recommender
+urban traffic
+social choice theory
+e learning
+retweeting
+blood
+treat
+mointor
+financial
+computer vision
+organizational
+insustry
+adaptive
+intrusion detection
+searching
+intrusion prevention system
+geographic information system
+social network analysis
+driving
+medical diagnosis
+mri
+vehicle information systems
+violations
+molecular biology
+industrial control
+bank security
+speech
+forwarding
+recommending
+tumor classification
+account credential enumeration attack
+industry
+supply chain
+immune
+arrhythmia
+click through
+grain
+health system
+automated
+multi robot system
+chronic
+inventory
+distress
+commercial
+traffic management system
+enterprise resource planning
+intelligent transportation systems
+infectious
+malaria borne diseases
+search engine
+semantic web
+driver
+blood pressure estimate
+text
+credit risk modeling
+functional brain
+carrier
+customer relationship management
+bacterial
+click
+mutual fund
+microbial
+automobile
+academic performance
+iris recognition
+mobility
+magnetic
+educational
+illness
+resonance
+electro
+retail
+crisis
+computational linguistics
+ofdm
+attack
+private information retrieval
+intelligent hardware
+advertising
+activation
+satellite attitude control
+vehicles
+mobile computing system
+wireless
+quantum information science
+retail electricity market
+metabolic
+road transportation system
+human pose estimation
+urban
+acute
+peripheral central nervous system
+information retrieval
+robot path planning
+mosquito
+frog
+transport
+rank
+cellular
+future
+venture capital
+customer
+link prediction
+student learning
+coordination
+mobile control
+kurtosis
+replication
+road safety
+traffic regulate
+indexing
+bug
+intelligent manufacture
+social media analysis
+recommendation
+path planning
+allergic diseases
+reforms
+attitude
+radio
+edge
+heart disease
+students
+intelligent electrical
+river
+food safety
+traffic flow prediction
+public management
+real estate management
+hydraulic
+lung cancer diagnosis and treating
+theory choice
+care
+disaster detection
+cognition
+addiction
+expression
+genome
+students learning
+captial
+multi camera systems
+mining industry
+communication
+respiratory
+internet
+venture
+temperature control
+collision
+heart
+highways
+industrial information
+air temperature control system
+heart disease predict diagnosis
+asset
+index
+medical
+distance learning
+simulate human cognition
+location
+traffic
+attendant
+cardiac disease
+security
+gene
+quantitative
+function brain imaging studies
+retweet
+price estimate
+intelligent control systems
+infections
+vehicle
+internet business
+travel time prediction
+travel time
+content
+sign recognition
+vehicle detection
+pso
+estimate channel density
+consulting
+online
+web search
+supply chain management
+supplier
+user behavior
+quantitative trading
+congestion control
+credit card
+user behavior predict
+innate
+clinical
+government information system
+production
+commodity
+marketing
+signal processing
+foreign exchange
+information security policy
+users behavior
+commerce
+cardiovascular
+road safety evaluation
+finance decision
+social
+image retrieval
+e market
+alcoholic
+cognitive science
+enterprise management
+cooperative information systems
+real time signal processing
+traveler
+reform
+railway
+web search engines
+e government
+price forecast
+nerve
+drug discovery
+mobile robot
+avoidance
+sentiment classification
+navigation
+secure
+automatic drive
+water
+viral
+education
+virus
+financial decision
+syndrome
+higher education
+college
+disease control and prevention
+simulation
+information system security
+viral marketing
+b2b
+b2c
+protein
+pedestrian detection
+biology
+function brain
+dense
+query
+sustainable
+location based service
+modulation
+video signal processing
+cardiac
+cardiovascular diseases
+social crowds
+private information

@@ -10,8 +10,12 @@ message QueryRequest {
 message QueryResponse {
     string response = 1;
 }
-
+message PossibleProductResponse {
+    repeated string response = 1;
+}
 service SearchService {
     rpc searchQuery(QueryRequest) returns (QueryResponse);
     rpc searchAid(QueryRequest) returns (QueryResponse);
+    rpc searchAi(QueryRequest) returns (QueryResponse);
+    rpc searchPossibleProduct(QueryRequest) returns (PossibleProductResponse);
 }

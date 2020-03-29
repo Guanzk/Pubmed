@@ -8,6 +8,10 @@ import com.searchproject.pubmed.Bean.*;
 import com.searchproject.pubmed.dao.MongoDao;
 //import com.searchproject.pubmed.dao.ReadDataFromRedis;
 import com.searchproject.pubmed.dao.RedisDao;
+import com.searchproject.pubmed.grpc.FuzzyQueryRequest;
+import com.searchproject.pubmed.grpc.FuzzyQueryResponse;
+import com.searchproject.pubmed.grpc.FuzzySearchGrpc;
+import com.searchproject.pubmed.grpc.ProductSearchGrpc;
 import com.searchproject.pubmed.util.ExpertHelper;
 import com.searchproject.pubmed.util.MakeJson;
 //import com.searchproject.pubmed.util.QueryResult;
@@ -28,6 +32,13 @@ public class SearchPubmed{
 //QueryResult queryResult;
 @Autowired
     MongoDao mongoDao;
+@Autowired
+private ProductSearchGrpc.ProductSearchBlockingStub productSearchBlockingStub;
+private FuzzySearchGrpc.FuzzySearchBlockingStub fuzzySearchBlockingStub;
+
+public SearchPubmed(FuzzySearchGrpc.FuzzySearchBlockingStub fuzzySearchBlockingStub){
+    this.fuzzySearchBlockingStub=fuzzySearchBlockingStub;
+}
 //@Deprecated
 //    public  String processPubmedSearch(String query) {
 //        log.info("———MessageReseived Function Process—-——————-");
@@ -105,8 +116,18 @@ public class SearchPubmed{
             result=entityJson;
 
         } else {
-            log.info("can not find query");
-            result="not found query";
+            FuzzyQueryResponse response=fuzzySearchBlockingStub.search(FuzzyQueryRequest.newBuilder().setQuery(query).build());
+            if(!response.getAidSetList().isEmpty()||!response.getEntitySetList().isEmpty()){
+                List<ExpertMongo>expertMongoList=new ArrayList<>();
+                List<EntityMongo>entityMongosList=new ArrayList<>();
+                if(response.getAidSetList().size()>0)expertMongoList=mongoDao.getExperts(response.getAidSetList());
+                if(response.getEntitySetList().size()>0)entityMongosList=mongoDao.getEntitys(response.getEntitySetList());
+                result=MakeJson.getFuzzyJson(expertMongoList,entityMongosList);
+            }else{
+                log.info("can not find query");
+                result="not found query";
+            }
+
         }
         long finishQueryTime = System.currentTimeMillis();
         log.info("process time:" + (finishQueryTime - startTime));

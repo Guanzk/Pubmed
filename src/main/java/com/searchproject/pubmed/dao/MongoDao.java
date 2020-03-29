@@ -1,5 +1,6 @@
 package com.searchproject.pubmed.dao;
 
+import com.google.protobuf.ProtocolStringList;
 import com.searchproject.pubmed.Bean.EntityMongo;
 import com.searchproject.pubmed.Bean.ExpertMongo;
 import lombok.extern.slf4j.Slf4j;
@@ -35,5 +36,9 @@ public class MongoDao {
     }
     public EntityMongo getEntity(String name){
         return mongoEntityRepository.findByName(name);
+    }
+
+    public List<EntityMongo> getEntitys(List<String> entitys) {
+        return mongoEntityRepository.findByNameIn(entitys);
     }
 }

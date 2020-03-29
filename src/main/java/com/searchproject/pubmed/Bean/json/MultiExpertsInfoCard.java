@@ -8,8 +8,9 @@ import java.util.List;
 @Data
 public class MultiExpertsInfoCard {
     private List<SimpleExpert> info_card;
+    private List<SimpleEntity> entities;
 
-    public MultiExpertsInfoCard(ArrayList<SimpleExpert> simpleExperts) {
+    public MultiExpertsInfoCard(List<SimpleExpert> simpleExperts) {
         setInfo_card(simpleExperts);
     }
 }

@@ -11,6 +11,7 @@ import com.searchproject.pubmed.Bean.*;
 //import com.searchproject.pubmed.Bean.auxiliary.PmidMongo;
 import com.searchproject.pubmed.Bean.json.*;
 //import com.searchproject.pubmed.dao.AuthorUtil;
+import com.searchproject.pubmed.grpc.FuzzyQueryResponse;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
@@ -506,5 +507,24 @@ public class MakeJson {
         Gson gson=new Gson();
 
         return gson.toJson(entityJson);
+    }
+
+
+
+    public static String getFuzzyJson(List<ExpertMongo> expertMongoList, List<EntityMongo> entityMongosList) {
+        List<SimpleExpert>experts=new ArrayList<>();
+        for(ExpertMongo expert:expertMongoList){
+            SimpleExpert simpleExpert=new SimpleExpert(expert);
+            experts.add(simpleExpert);
+        }
+        List<SimpleEntity>entities=new ArrayList<>();
+        for(EntityMongo entity:entityMongosList){
+            SimpleEntity simpleEntity=new SimpleEntity(entity);
+            entities.add(simpleEntity);
+        }
+        MultiExpertsInfoCard infoCard=new MultiExpertsInfoCard(experts);
+        infoCard.setInfo_card(experts);
+        infoCard.setEntities(entities);
+        return new Gson().toJson(infoCard);
     }
 }

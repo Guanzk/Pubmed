@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.searchproject.pubmed.grpc;
+
+
+
+message ProductRequest {
+    string query = 1;
+}
+
+message ProductResponse {
+   repeated string result = 1;
+
+}
+
+service ProductSearch {
+    rpc search(ProductRequest) returns (ProductResponse);
+
+}

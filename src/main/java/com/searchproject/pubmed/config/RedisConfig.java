@@ -54,6 +54,11 @@ public class RedisConfig  {
     public RedisStandaloneConfiguration redisConfigC() {
         return new RedisStandaloneConfiguration();
     }
+    @Bean
+    @ConfigurationProperties(prefix = "spring.redis.redis-ai")
+    public RedisStandaloneConfiguration redisConfigAi() {
+        return new RedisStandaloneConfiguration();
+    }
 
     @Bean("factoryA")
     @Primary
@@ -77,9 +82,16 @@ public class RedisConfig  {
         return new LettuceConnectionFactory(redisConfigC, clientConfiguration);
     }
 
+    @Bean("factoryAi")
+    public LettuceConnectionFactory factoryAi(GenericObjectPoolConfig config, RedisStandaloneConfiguration redisConfigAi) {
+        LettuceClientConfiguration clientConfiguration = LettucePoolingClientConfiguration.builder()
+                .poolConfig(config).build();
+        return new LettuceConnectionFactory(redisConfigAi, clientConfiguration);
+    }
     @Bean(name = "redisTemplateA")
     @Primary
     public StringRedisTemplate redisTemplateA(@Qualifier("factoryA") LettuceConnectionFactory factoryA) {
+
         StringRedisTemplate template = new StringRedisTemplate(factoryA);
 
         return template;
@@ -94,6 +106,13 @@ public class RedisConfig  {
     @Bean(name = "redisTemplateC")
     public StringRedisTemplate redisTemplateC(@Qualifier("factoryC") LettuceConnectionFactory factoryC) {
         StringRedisTemplate template = new StringRedisTemplate(factoryC);
+
+        return template;
+    }
+    @Bean(name = "redisTemplateAi")
+    public StringRedisTemplate redisTemplateAI(@Qualifier("factoryAi") LettuceConnectionFactory factoryAi) {
+        factoryAi.setShareNativeConnection(false);
+        StringRedisTemplate template = new StringRedisTemplate(factoryAi);
 
         return template;
     }
