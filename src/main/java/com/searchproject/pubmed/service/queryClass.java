@@ -1,7 +1,5 @@
 package com.searchproject.pubmed.service;
 
-import java.util.*;
-
 public class queryClass {
 
     String maxQuery;

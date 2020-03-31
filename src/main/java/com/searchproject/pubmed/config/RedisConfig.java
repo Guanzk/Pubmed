@@ -66,6 +66,7 @@ public class RedisConfig {
     @Bean(name = "redisTemplateA")
     @Primary
     public StringRedisTemplate redisTemplateA(@Qualifier("factoryA") LettuceConnectionFactory factoryA) {
+        factoryA.setShareNativeConnection(false);
         StringRedisTemplate template = new StringRedisTemplate(factoryA);
 
         return template;

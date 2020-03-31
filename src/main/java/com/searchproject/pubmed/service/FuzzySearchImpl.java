@@ -4,7 +4,10 @@ import com.searchproject.pubmed.grpc.FuzzyQueryRequest;
 import com.searchproject.pubmed.grpc.FuzzyQueryResponse;
 import com.searchproject.pubmed.grpc.FuzzySearchGrpc;
 import io.grpc.stub.StreamObserver;
+import org.lognet.springboot.grpc.GRpcService;
 
+//生物医药模糊查询
+@GRpcService
 public class FuzzySearchImpl extends FuzzySearchGrpc.FuzzySearchImplBase {
     @Override
     public void search(FuzzyQueryRequest request, StreamObserver<FuzzyQueryResponse> responseObserver){

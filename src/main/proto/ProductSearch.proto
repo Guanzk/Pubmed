@@ -9,7 +9,7 @@ message ProductRequest {
 }
 
 message ProductResponse {
-   repeated string result = 1;
+    string result = 1;
 
 }
 

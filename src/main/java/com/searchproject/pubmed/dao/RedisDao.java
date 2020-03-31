@@ -3,6 +3,7 @@ package com.searchproject.pubmed.dao;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -20,15 +21,15 @@ public class RedisDao {
     /**
      * 动态切换数据库
      */
-//    public void setDataBase(int num) {
-//        LettuceConnectionFactory connectionFactory = (LettuceConnectionFactory) redisTemplate.getConnectionFactory();
-//        if (connectionFactory != null && num != connectionFactory.getDatabase()) {
-//            connectionFactory.setDatabase(num);
-//            this.redisTemplate.setConnectionFactory(connectionFactory);
-//            connectionFactory.resetConnection();
-//            log.debug("切换成功");
-//        }
-//    }
+    public void setDataBase(int num) {
+        LettuceConnectionFactory connectionFactory = (LettuceConnectionFactory) redisTemplateA.getConnectionFactory();
+        if (connectionFactory != null && num != connectionFactory.getDatabase()) {
+            connectionFactory.setDatabase(num);
+            redisTemplateA.setConnectionFactory(connectionFactory);
+            connectionFactory.resetConnection();
+            log.debug("切换成功");
+        }
+    }
     public Set<String> getAidSet(String fullname){
 //        setDataBase(7);
 
@@ -38,5 +39,7 @@ public class RedisDao {
 //        setDataBase(19);
         return redisTemplateB.opsForSet().members(entity);
     }
+
+
 
 }

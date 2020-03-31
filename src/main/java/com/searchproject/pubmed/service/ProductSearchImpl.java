@@ -15,8 +15,8 @@ public class ProductSearchImpl extends ProductSearchGrpc.ProductSearchImplBase {
     public void search(com.searchproject.pubmed.grpc.ProductRequest request,
                        io.grpc.stub.StreamObserver<com.searchproject.pubmed.grpc.ProductResponse> responseObserver) {
       String query=request.getQuery();
-        List<String> res=relevantProduct.getProduct(query);
-        responseObserver.onNext(ProductResponse.newBuilder().addAllResult(res).build());
+        String res=relevantProduct.getProduct(query);
+        responseObserver.onNext(ProductResponse.newBuilder().setResult(res).build());
         responseObserver.onCompleted();
     }
 }

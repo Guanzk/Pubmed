@@ -1,15 +1,13 @@
 package com.searchproject.pubmed.service;
 
-import java.io.*;
-import java.util.*;
-import java.util.ArrayList;
-
-import java.util.List;
-
-
 import com.searchproject.pubmed.dao.RedisDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 public class matchQuery {
