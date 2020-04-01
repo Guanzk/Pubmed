@@ -111,9 +111,15 @@ public SearchPubmed(FuzzySearchGrpc.FuzzySearchBlockingStub fuzzySearchBlockingS
         } else if (!entityPMIDS.isEmpty()) {
             log.info("开始查找医药实体");
             EntityMongo entity=mongoDao.getEntity(query);//TODO 相似名字提醒
-            String entityJson = MakeJson.getEntityJson(entity);
-            log.info("entity json:" + entityJson);
-            result=entityJson;
+            log.info("entityMongo:{}",entity);
+            if(entity==null){
+                result="null";
+            }else{
+                String entityJson = MakeJson.getEntityJson(entity);
+                log.info("entity json:" + entityJson);
+                result=entityJson;
+            }
+
 
         } else {
             FuzzyQueryResponse response=fuzzySearchBlockingStub.search(FuzzyQueryRequest.newBuilder().setQuery(query).build());
