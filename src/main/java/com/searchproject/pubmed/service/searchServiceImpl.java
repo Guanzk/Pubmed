@@ -5,10 +5,12 @@ import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+
 
 @Slf4j
 @GRpcService

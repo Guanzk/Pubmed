@@ -84,16 +84,16 @@ public class Dimensions_data {
     public static Dimensions_data createTopicDimension(EntityMongo entity) {
         Dimensions_data dimensions_data=new Dimensions_data();
         dimensions_data.setData(EntityHelper.getTopKTopic(5,entity));
-        dimensions_data.setGraphName("experts_distribution_tree");
-        dimensions_data.setDimension("Topic distribution");
+        dimensions_data.setGraphName("topic_pie");
+        dimensions_data.setDimension("TOPIC DISTRIBUTION");
         return dimensions_data;
     }
 
     public static Dimensions_data createOrganizationDimension(EntityMongo entity) {
         Dimensions_data dimensions_data=new Dimensions_data();
         dimensions_data.setData(EntityHelper.getTopKOrganization(5,entity));
-        dimensions_data.setGraphName("related organizations");
-        dimensions_data.setDimension("related_organizations_bar");
+        dimensions_data.setGraphName("related_organizations_bar");
+        dimensions_data.setDimension("related organizations");
         return dimensions_data;
     }
 

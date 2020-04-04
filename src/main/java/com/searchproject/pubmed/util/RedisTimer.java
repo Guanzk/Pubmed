@@ -1,6 +1,8 @@
 package com.searchproject.pubmed.util;
 
 import com.searchproject.pubmed.dao.RedisDao;
+import com.searchproject.pubmed.grpc.ProductSearchGrpc;
+import com.searchproject.pubmed.service.searchServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -17,4 +19,11 @@ public class RedisTimer {
         redisDao.getAidSet("martin katz");
         redisDao.getPmidSet("human k5 keratin gene");
     }
+//    @Autowired
+//    ProductSearchGrpc.ProductSearchBlockingStub productSearchBlockingStub;
+//    @Scheduled(cron = "0/50 * * * * *")
+//    public void grpcTimer(){
+//        log.debug("grpc 心跳");
+//       productSearchBlockingStub.search()
+//    }
 }
