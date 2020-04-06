@@ -1,6 +1,7 @@
 package com.searchproject.pubmed;
 
 import com.searchproject.pubmed.config.RedisIndexConfig;
+import com.searchproject.pubmed.service.SearchAi;
 import com.searchproject.pubmed.service.SearchPubmed;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -15,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PubmedApplicationTests {
-@Autowired
+    @Autowired
     RedisIndexConfig redisIndexConfig;
     @Test
     public void contextLoads() {
@@ -23,10 +24,10 @@ public class PubmedApplicationTests {
 
     }
     @Autowired
-    SearchPubmed searchPubmed;
+    SearchAi searchAi;
     @Test
     public void testPubmed(){
-        log.info(searchPubmed.processPubmedQuery("child"));
+        log.info(searchAi.search("deeplearning"));
     }
 
 }
