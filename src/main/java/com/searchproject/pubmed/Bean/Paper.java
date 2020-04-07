@@ -14,10 +14,10 @@ import java.util.Map.Entry;
 @Entity
 public class Paper {
 
-@Id
-    private String paper_long_id ;
+    @Id
+    private String paperlongid ;
 
-    private String paper_title;
+    private String papertitle;
 
     private String paper_abstract;
     @Convert(converter = ListConverter.class)
