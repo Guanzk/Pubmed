@@ -38,7 +38,7 @@ public class SearchAi {
             result.put(queryClasses.get(i).getMaxQuery(),queryClasses.get(i).getQueryType());
         }
         if(queryClasses.isEmpty()){
-            result.put(query,"keyWord");
+            result.put(query,"KeyWord");
         }
         log.info("---HashMap<> Result: " + result);
         LinkedList<String> keyList=new LinkedList<>(result.keySet());
@@ -57,14 +57,20 @@ public class SearchAi {
         ArrayList<CnNews> cnnewsResult = new ArrayList<>();
         ArrayList<News> newsResult = new ArrayList<>();
         ArrayList<Patent_new> patentResult = new ArrayList<>();
-
+        log.info("{}",allPaperID);
         if(!allPaperID.isEmpty()) {
             for(ArrayList<String> paperID : allPaperID) {
+                if(paperID.isEmpty()){
+                    continue;
+                }
                 paperResult.addAll(mysqlDao.getPapers(paperID));
             }
         }
         if(!allCNNewsID.isEmpty()) {
             for(ArrayList<String> cnnewsID : allCNNewsID) {
+                if(cnnewsID.isEmpty()){
+                    continue;
+                }
                 cnnewsResult.addAll(mysqlDao.getCnnews(cnnewsID));
             }
         }
@@ -72,11 +78,17 @@ public class SearchAi {
             for(List<String> newsID : allNewsID) {
                 //由于传入的ArrayList为String属性，因而为自动配置方便，在此需要对数组属性进行转换 String -> Integer
                 List<Integer> newsid = newsID.stream().map(Integer::parseInt).collect(Collectors.toList());
+                if(newsID.isEmpty()){
+                    continue;
+                }
                 newsResult.addAll(mysqlDao.getNews(newsid));
             }
         }
         if(!allPatentID.isEmpty()) {
             for(ArrayList<String> patentID : allPatentID) {
+                if(patentID.isEmpty()){
+                    continue;
+                }
                 patentResult.addAll(mysqlDao.getPatents(patentID));
             }
         }

@@ -46,7 +46,8 @@ public class AiMapList {
         String line;
 
             try {
-               while (!((line=br.readLine())!=null)) {
+               while (((line=br.readLine())!=null)) {
+
                     set.add(line);
                 }
                 br.close();

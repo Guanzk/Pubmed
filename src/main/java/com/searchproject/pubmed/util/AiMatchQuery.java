@@ -80,7 +80,7 @@ public class AiMatchQuery {
         if(aiMapList.getIndusSet().contains(subSeq)){
             result="Field";
         }else if(aiMapList.getKeywordSet().contains(subSeq)){
-            result="Keyword";
+            result="KeyWord";
         }else if(aiMapList.getOrganizationSet().contains(subSeq)){
             result="Org";
         }else if(aiMapList.getExpertSet().contains(subSeq)){

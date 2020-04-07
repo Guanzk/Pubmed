@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
-import redis.clients.jedis.Jedis;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,6 +38,8 @@ public class RedisDao {
             connectionFactory.setDatabase(num);
             redisTemplateAi.setConnectionFactory(connectionFactory);
             connectionFactory.resetConnection();
+//            log.info("ai 切换{}",num);
+//            log.info("connection:{}",redisTemplateAi.getConnectionFactory().getConnection());
             log.debug("切换成功");
         }
     }
@@ -57,7 +58,8 @@ public class RedisDao {
     }
 
     public ArrayList<String> getIDList(String query, String type, String ansType) {
-        ArrayList<String> keys = getFormatKeyList(query, redisIndexConfig.getMap().get("RETRIVE_" + type + "_" + ansType),
+        log.info("RETRIEVE_" + type + "_" + ansType);
+        ArrayList<String> keys = getFormatKeyList(query, redisIndexConfig.getMap().get("RETRIEVE_" + type + "_" + ansType),
                 redisIndexConfig.getMap().get("FORMAT_" + type + "_NAME"));
         log.info("RETRIEVE_" + type + "_" + ansType + "====" + "FORMAT_" + type + "_NAME");
         log.info("KeysSet:" + keys);
@@ -70,23 +72,30 @@ public class RedisDao {
 
     private ArrayList<String> getIDListByFormatKey(ArrayList<String> keys, Integer baseNum) {
         setAiDataBase(baseNum);
-        ArrayList<String>res=new ArrayList<>();
+        log.info("getIDListByFormatKey,baseNum:{}",baseNum);
+
+       List<String>res=new ArrayList<>();
         for(String key:keys){
+            log.info("type:{}",redisTemplateAi.type(key));
             res.addAll(redisTemplateAi.opsForList().range(key,0,200));
         }
-        return res;
+        return (ArrayList<String>) res;
     }
 
     private ArrayList<String> getFormatKeyList(String query, int cleanBaseNum, int aliasBaseNum) {
         setAiDataBase(cleanBaseNum);
         ArrayList<String>res=new ArrayList<>();
-        String key=redisTemplateAi.opsForValue().get(query);
-        if(key==null){
+       log.info( "cleanbaseNum:{}mtype:{}",cleanBaseNum,redisTemplateAi.type(query));
+        if(!redisTemplateAi.hasKey(query)){
             setAiDataBase(aliasBaseNum);
             String cleanQuery=query.toLowerCase().replace(" ","");
             List<String>list= redisTemplateAi.opsForList().range(cleanQuery,0,100);
-            if(list.size()>0)res.addAll(list);
-        }else res.add(query);
+            if(list.size()>0){
+                res.addAll(list);
+            }
+        }else {
+            res.add(query);
+        }
 
         return res;
     }

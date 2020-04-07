@@ -23,25 +23,23 @@ public class Paper {
     @Convert(converter = ListConverter.class)
     private List<String> paper_authors;
 
-    private int paper_publish_year;
+    private Integer paper_publish_year;
 
-    private int paper_publish_month;
+    private Integer paper_publish_month;
 
-    private String paper_journal_full_ame;
+    private String paper_journal_full_name;
 
     private String paper_journal_short_name;
 
     private String paper_conf_full_name;
 
     private String paper_conf_short_name;
-    @Convert(converter = ListConverter.class)
-    private List<String> paper_topics;
-    @Convert(converter = ListConverter.class)
-    private List<String> paper_entities;
-    @Convert(converter = ListConverter.class)
-    private List<String> paper_citations_in_long_id ;
-    @Convert(converter = ListConverter.class)
-    private List<String> paper_citations_out_long_id;
+
+    private String paper_topics;
+
+    private String paper_entities;
+    private String paper_citations_in_long_id ;
+    private String paper_citations_out_long_id;
 
     private int paper_citations_num;
 
@@ -63,5 +61,5 @@ public class Paper {
 
     private String paper_lang;
 
-    private int paper_influence;
+        private Integer paper_influence;
 }

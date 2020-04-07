@@ -30,6 +30,11 @@ public class MysqlDao {
 
 
     public List<Paper> getPapers(List<String> paper_long_ids) {
+        for(String longid:paper_long_ids){
+            log.info("long id:{}",longid);
+            mysqlPaperRepository.findByPaperlongid(longid);
+        }
+
         return mysqlPaperRepository.findAllByPaperlongidIn(paper_long_ids);
     }
     public List<Patent_new> getPatents(List<String> patent_ids) {

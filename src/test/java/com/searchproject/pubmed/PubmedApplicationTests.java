@@ -3,6 +3,7 @@ package com.searchproject.pubmed;
 import com.searchproject.pubmed.config.RedisIndexConfig;
 import com.searchproject.pubmed.service.SearchAi;
 import com.searchproject.pubmed.service.SearchPubmed;
+import com.searchproject.pubmed.util.AiMapList;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,6 +29,13 @@ public class PubmedApplicationTests {
     @Test
     public void testPubmed(){
         log.info(searchAi.search("deeplearning"));
+    }
+
+    @Autowired
+    AiMapList aiMapList;
+    @Test
+    public void test(){
+        log.info("{}",aiMapList.getExpertSet());
     }
 
 }
