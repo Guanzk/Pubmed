@@ -81,7 +81,7 @@ public class RedisDao {
         if(key==null){
             setAiDataBase(aliasBaseNum);
             String cleanQuery=query.toLowerCase().replace(" ","");
-            List<String>list= redisTemplateAi.opsForList().range(query,0,100);
+            List<String>list= redisTemplateAi.opsForList().range(cleanQuery,0,100);
             if(list.size()>0)res.addAll(list);
         }else res.add(query);
 
