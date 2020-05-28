@@ -1,5 +1,6 @@
 <application>
   <component name="JrePropertiesCache">
     <jre homeDir="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\jbr" arch64Bit="true" />
+    <jre homeDir="C:\Program Files\Java\jdk1.8.0_231" arch64Bit="true" />
   </component>
 </application>
